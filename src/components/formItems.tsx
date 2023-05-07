@@ -4,6 +4,7 @@ import { HiCursorArrowRays, HiEyeSlash, HiHandRaised, HiMagnifyingGlass, HiMicro
 import DsForm from "../designSystem/components/forms/DsForm";
 import DsFormInput from "../designSystem/components/forms/DsFormInput";
 import DsFormSelect from "../designSystem/components/forms/DsFormSelect";
+import DsFormDatePicker from './../designSystem/components/forms/DsFormDatePicker';
 
 const FormItems: FC = () => {
 
@@ -131,6 +132,8 @@ const FormItems: FC = () => {
                 <DsFormInput type="text" name="input18" size="md" placeholder="enter number" className="w-full" />
               </div>
             </>
+
+            <DsFormDatePicker name="input28" size="md" label="select date" />
 
           </DsForm>
 

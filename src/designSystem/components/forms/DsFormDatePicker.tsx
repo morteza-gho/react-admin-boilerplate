@@ -1,5 +1,5 @@
+import React, { FC } from "react";
 import { DatePicker, Form } from "antd";
-import { FC } from "react";
 import FormItemLabel from "./partials/FormItemLabel";
 import { FormItemPropTypes } from "./types";
 

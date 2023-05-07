@@ -10,10 +10,10 @@
     }
   }
   label {
-    @apply inline-block text-base text-black-main cursor-pointer
+    @apply inline-block text-base text-stone-800 cursor-pointer
   }
   .checkbox, .radio {
-    @apply w-4 h-4 border border-black-main rounded-sm cursor-pointer transition focus:ring-0 focus:ring-offset-0
+    @apply w-4 h-4 border border-stone-800 rounded-sm cursor-pointer transition focus:ring-0 focus:ring-offset-0
   }
 
   /* ant design style */
@@ -22,7 +22,7 @@
 
 
     .ant-checkbox, .ant-radio {
-      @apply text-black-main top-0;
+      @apply text-stone-800 top-0;
 
       &.ant-checkbox-disabled{
         &.ant-checkbox-checked .ant-checkbox-inner {
@@ -42,7 +42,7 @@
     } /* .ant-checkbox, .ant-radio */
 
     .ant-checkbox-inner {
-      @apply w-4 h-4 border-black-main rounded-sm;
+      @apply w-4 h-4 border-stone-800 rounded-sm;
 
       &:after {
         @apply w-1.5 h-2.5
@@ -50,7 +50,8 @@
 
     }
     .ant-radio-inner {
-      @apply w-4 h-4 border-black-main shadow-none;
+      @apply w-4 h-4 border-stone-800 shadow-none;
+      @apply bg-white !important;
     }
 
     &.checkbox-circle {
@@ -117,15 +118,15 @@
     &.checkbox-black {
       &:hover {
         .ant-checkbox-inner {
-          @apply border-black-main
+          @apply border-stone-800
         }
       }
       .ant-checkbox-checked {
         &:after {
-          @apply border-black-main
+          @apply border-stone-800
         }
         .ant-checkbox-inner {
-          @apply border-black-main bg-black-main
+          @apply border-stone-800 bg-stone-800
         }
       }
     } /* .checkbox-black */
@@ -133,15 +134,15 @@
     &.checkbox-blue {
       &:hover {
         .ant-checkbox-inner {
-          @apply border-blue-main
+          @apply border-blue-600
         }
       }
       .ant-checkbox-checked {
         &:after {
-          @apply border-blue-main
+          @apply border-blue-600
         }
         .ant-checkbox-inner {
-          @apply border-blue-main bg-blue-main
+          @apply border-blue-600 bg-blue-600
         }
       }
     } /* .checkbox-blue */
@@ -149,15 +150,15 @@
     &.checkbox-yellow {
       &:hover {
         .ant-checkbox-inner {
-          @apply border-yellow-main
+          @apply border-yellow-600
         }
       }
       .ant-checkbox-checked {
         &:after {
-          @apply border-yellow-main
+          @apply border-yellow-600
         }
         .ant-checkbox-inner {
-          @apply border-yellow-main bg-yellow-main
+          @apply border-yellow-600 bg-yellow-600
         }
       }
     } /* .checkbox-blue */
@@ -165,18 +166,18 @@
     &.radio-black {
       /* &:hover {
         .ant-radio-inner {
-          @apply border-black-main
+          @apply border-stone-800
         }
       } */
       .ant-radio-checked {
         &:after {
-          @apply bg-black-main
+          @apply bg-stone-800
         }
         .ant-radio-inner {
-          @apply border-black-main;
+          @apply border-stone-800;
 
           &:after {
-            @apply bg-black-main
+            @apply bg-stone-800
           }
         }
       }
@@ -185,18 +186,18 @@
     &.radio-blue {
       /* &:hover {
         .ant-radio-inner {
-          @apply border-blue-main
+          @apply border-blue-600
         }
       } */
       .ant-radio-checked {
         &:after {
-          @apply bg-blue-main
+          @apply bg-blue-600
         }
         .ant-radio-inner {
-          @apply border-blue-main;
+          @apply border-blue-600;
 
           &:after {
-            @apply bg-blue-main
+            @apply bg-blue-600
           }
         }
       }
@@ -205,18 +206,18 @@
     &.radio-yellow {
       /* &:hover {
         .ant-radio-inner {
-          @apply border-yellow-main
+          @apply border-yellow-600
         }
       } */
       .ant-radio-checked {
         &:after {
-          @apply bg-yellow-main
+          @apply bg-yellow-600
         }
         .ant-radio-inner {
-          @apply border-yellow-main;
+          @apply border-yellow-600;
 
           &:after {
-            @apply bg-yellow-main
+            @apply bg-yellow-600
           }
         }
       }
@@ -244,20 +245,20 @@
 }
 
 .checkbox-blue .checkbox, .radio-blue .radio {
-  @apply border-black-main hover:border-blue-main checked:text-blue-main checked:border-blue-main;
+  @apply border-stone-800 hover:border-blue-600 checked:text-blue-600 checked:border-blue-600;
 }
 
 .checkbox-yellow .checkbox, .radio-yellow .radio {
-  @apply border-black-main hover:border-yellow-main checked:text-yellow-main checked:border-yellow-main;
+  @apply border-stone-800 hover:border-yellow-600 checked:text-yellow-600 checked:border-yellow-600;
   /* &:checked {
     +label {
-      @apply text-yellow-main
+      @apply text-yellow-600
     }
   } */
 }
 
 .checkbox-black .checkbox, .radio-black .radio {
-  @apply border-black-main hover:border-black-main checked:text-black-main checked:border-black-main;
+  @apply border-stone-800 hover:border-stone-800 checked:text-stone-800 checked:border-stone-800;
 }
 
 .checkbox-bordered, .radio-bordered {

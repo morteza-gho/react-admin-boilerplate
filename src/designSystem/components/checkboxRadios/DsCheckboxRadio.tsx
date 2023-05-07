@@ -1,9 +1,7 @@
 import { Checkbox, Form, Radio, RadioChangeEvent, Space, Tooltip } from "antd";
-import FormItemLabel from "antd/es/form/FormItemLabel";
 import { CheckboxChangeEvent } from "antd/lib/checkbox";
-import React from "react";
-import { FC, ReactNode } from "react";
-import { HiOutlineInformationCircle } from "react-icons/hi2";
+import React, { FC, ReactNode } from "react";
+import FormItemLabel from "../forms/partials/FormItemLabel";
 import { IRadioItem } from "./type";
 
 interface IPropTypes {

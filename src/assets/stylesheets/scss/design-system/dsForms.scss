@@ -23,7 +23,7 @@ textarea {
     @apply flex justify-between items-center;
 
     .text {
-      @apply block text-gray-main capitalize
+      @apply block text-gray-600 capitalize
     }
     .another-text {
       .icon {
@@ -37,10 +37,10 @@ textarea {
   }
 
   .form-input {
-    @apply border border-gray-light bg-snowy-main text-black-main w-full h-full rounded transition placeholder:text-gray-light focus:border-blue-main;
+    @apply border border-gray-300 bg-white text-stone-800 w-full h-full rounded transition placeholder:text-gray-300 focus:border-blue-600;
 
     &[disabled] {
-      @apply bg-gray-lighter text-gray-main cursor-not-allowed !important
+      @apply bg-gray-200 text-gray-600 cursor-not-allowed !important
     }
   }
 
@@ -53,7 +53,7 @@ textarea {
   }
 
   .errors-wrapper {
-    @apply text-red-main mt-1 text-sm;
+    @apply text-red-600 mt-1 text-sm;
 
     .error-item {
       @apply flex items-center gap-x-1;
@@ -64,21 +64,21 @@ textarea {
     @apply w-full;
 
     &:hover .ant-select-selector {
-      @apply border-gray-light
+      @apply border-gray-300
     }
     &.ant-select-focused {
       @apply border-transparent;
       
       .ant-select-selector {
-        @apply border-blue-main shadow-none !important
+        @apply border-blue-600 shadow-none !important
       }
     } 
     &.ant-select-disabled .ant-select-selector {
-      @apply bg-gray-lighter text-gray-main cursor-not-allowed
+      @apply bg-gray-200 text-gray-600 cursor-not-allowed
     }
 
     .ant-select-selector {
-      @apply border border-gray-light bg-snowy-main text-black-main w-full h-full items-center rounded placeholder:text-gray-light focus:border-blue-main
+      @apply border border-gray-300 bg-white text-stone-800 w-full h-full items-center rounded placeholder:text-gray-300 focus:border-blue-600
     }
 
     .ant-select-selection-search {
@@ -88,13 +88,13 @@ textarea {
       @apply h-full !important
     }
     .ant-select-selection-placeholder {
-      @apply text-gray-light
+      @apply text-gray-300
     }
     .ant-select-arrow {
-      @apply text-blue-main text-base
+      @apply text-blue-600 text-base
     }
     .ant-select-clear {
-      @apply w-5 h-5 text-red-main text-xl right-2.5 top-[45%]
+      @apply w-5 h-5 text-red-600 text-xl right-2.5 top-[45%]
     }
 
   } /* .ant-select */
@@ -102,7 +102,7 @@ textarea {
   .ant-select-multiple {
 
     .ant-select-selection-item {
-      @apply bg-gray-lighter h-full border-0 my-0 font-regular
+      @apply bg-gray-200 h-full border-0 my-0 font-regular
     }
     .ant-select-selection-item-remove {
       @apply -mt-0.5
@@ -110,10 +110,10 @@ textarea {
   }  /* .ant-select-multiple */
 
   .ant-picker {
-    @apply border border-gray-light bg-snowy-main text-black-main w-full h-full items-center rounded placeholder:text-gray-light focus:border-blue-main;
+    @apply border border-gray-300 bg-white text-stone-800 w-full h-full items-center rounded placeholder:text-gray-300 focus:border-blue-600;
     
     &.ant-picker-focused {
-      @apply shadow-none border-blue-main
+      @apply shadow-none border-blue-600
     }
     &.ant-picker-status-error {
       @apply border-red-400 focus:border-red-400
@@ -155,10 +155,10 @@ textarea {
 .form-item-has-icon {
 
   .icons-wrapper {
-    @apply flex gap-x-2 text-gray-main absolute;
+    @apply flex gap-x-2 text-gray-600 absolute;
 
     .icon {
-      @apply cursor-pointer hover:text-blue-main
+      @apply cursor-pointer hover:text-blue-600
     }
   }
 
@@ -189,17 +189,17 @@ textarea {
 } 
 .form-item-stick-icon-left {
   .stick-icon-wrapper {
-    @apply left-0 border-r border-r-gray-light
+    @apply left-0 border-r border-r-gray-300
   }
 }
 .form-item-stick-icon-right {
   .stick-icon-wrapper {
-    @apply right-0 border-l border-l-gray-light
+    @apply right-0 border-l border-l-gray-300
   }
 }
 
 .attached-form-items {
-  @apply sm:grid;
+  @apply sm:flex;
 
   .form-item {
     
@@ -442,29 +442,12 @@ textarea {
     @apply items-center text-base font-regular;
 
     &:hover {
-      @apply bg-gray-lighter !important
-    }
-    
-    &:before {
-      content: '';
-      @apply border border-black-main w-5 h-5 mr-2 rounded-sm
+      @apply bg-gray-200 !important
     }
 
     &.ant-select-item-option-selected {
-      @apply bg-transparent text-blue-main font-regular;
-
-      &:before {
-        @apply border-blue-main bg-blue-main
-      }
-      .ant-select-item-option-state {
-        @apply text-snowy-main
-      }
-
+      @apply bg-transparent text-blue-600 font-regular;
     } 
-
-    .ant-select-item-option-state {
-      @apply absolute left-4 top-1 xl:top-0.5 2xl:left-3.5 2xl:top-0.5 text-base
-    }
 
   } /* .ant-select-item-option */
 

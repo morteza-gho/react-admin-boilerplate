@@ -1,6 +1,6 @@
+import React, { FC, ReactNode } from "react";
 import { Form, Input } from "antd";
 import TextArea from "antd/lib/input/TextArea";
-import { FC, ReactNode } from "react";
 import FormItemLabel from "./partials/FormItemLabel";
 import { FormItemPropTypes } from "./types";
 

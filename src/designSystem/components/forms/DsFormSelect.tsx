@@ -1,5 +1,5 @@
+import React, { FC, ReactNode } from "react";
 import { Form, Select } from "antd";
-import { FC, ReactNode } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import FormItemLabel from "./partials/FormItemLabel";
 import { FormItemPropTypes, ISelectItem } from "./types";

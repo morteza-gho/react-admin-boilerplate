@@ -7,6 +7,7 @@ const Login = lazy(() => import("../components/login/Login"));
 const PageNotFound = lazy(() => import("../components/global/PageNotFound"));
 const Dashboard = lazy(() => import("../components/Dashboard"));
 const Buttons = lazy(() => import("../components/Buttons"));
+const FormItems = lazy(() => import("../components/FormItems"));
 
 const AppRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const AppRoutes = () => {
         <Route path='/app' element={<App />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="buttons" element={<Buttons />} />
+          <Route path="formItems" element={<FormItems />} />
 
           <Route path="404" element={<PageNotFound />} />
         </Route>

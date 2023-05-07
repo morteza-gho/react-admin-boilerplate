@@ -57,7 +57,7 @@ const App = () => {
 
         <header className='main-header'>
           <div className='flex justify-between'>
-            <DsButton type='outline-white' justIcon icon={<HiMenu />} onClick={() => setCollapsed(!collapsed)} />
+            <DsButton type='light' justIcon icon={<HiMenu />} onClick={() => setCollapsed(!collapsed)} />
           </div>
         </header>
 

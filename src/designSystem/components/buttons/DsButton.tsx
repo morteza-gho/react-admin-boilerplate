@@ -8,7 +8,7 @@ interface IPropTypes {
   type:
   /* main colors */     'default' | 'alternative' | 'dark' | 'light' | 'green' | 'red' | 'yellow' | 'orange' | 'purple' |
   /* outline colors */  'outline-default' | 'outline-dark' | 'outline-green' | 'outline-red' | 'outline-yellow' | 'outline-orange' | 'outline-purple' |
-  /* light colors */    'blue-light' | 'blue-lighter' | 'green-light' | 'red-light'
+  /* light colors */    'default-light' | 'dark-light' | 'green-light' | 'red-light' | 'yellow-light' | 'orange-light' | 'purple-light'
   pill?: boolean
   icon?: ReactElement
   rightIcon?: boolean

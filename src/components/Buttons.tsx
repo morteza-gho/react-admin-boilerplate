@@ -26,6 +26,32 @@ const Buttons: FC = () => {
         </div>
 
         <div className="ds-section-vaients">
+          <h4 className="varients-title">Light Button</h4>
+          <div className="flex items-start gap-x-2">
+            <DsButton type="default-light" text='Default' />
+            <DsButton type="dark-light" text='Dark' />
+            <DsButton type="green-light" text='Green' />
+            <DsButton type="red-light" text='Red' />
+            <DsButton type="yellow-light" text='Yellow' />
+            <DsButton type="orange-light" text='Orange' />
+            <DsButton type="purple-light" text='Purple' />
+          </div>
+        </div>
+
+        <div className="ds-section-vaients">
+          <h4 className="varients-title">Outline buttons</h4>
+          <div className="flex items-start gap-x-2">
+            <DsButton type="outline-default" text='Default' />
+            <DsButton type="outline-dark" text='Dark' />
+            <DsButton type="outline-green" text='Green' />
+            <DsButton type="outline-red" text='Red' />
+            <DsButton type="outline-yellow" text='Yellow' />
+            <DsButton type="outline-orange" text='Orange' />
+            <DsButton type="outline-purple" text='Purple' />
+          </div>
+        </div>
+
+        <div className="ds-section-vaients">
           <h4 className="varients-title">Button pills</h4>
           <div className="flex items-start gap-x-2">
             <DsButton type="default" text='Default' pill />
@@ -37,19 +63,6 @@ const Buttons: FC = () => {
             <DsButton type="yellow" text='Yellow' pill />
             <DsButton type="orange" text='Orange' pill />
             <DsButton type="purple" text='Purple' pill />
-          </div>
-        </div>
-
-        <div className="ds-section-vaients">
-          <h4 className="varients-title">Outline buttons</h4>
-          <div className="flex items-start gap-x-2">
-            <DsButton type="outline-default" text='Outline Default' />
-            <DsButton type="outline-dark" text='Outline Dark' />
-            <DsButton type="outline-green" text='Outline Green' />
-            <DsButton type="outline-red" text='Outline Red' />
-            <DsButton type="outline-yellow" text='Outline Yellow' />
-            <DsButton type="outline-orange" text='Outline Orange' />
-            <DsButton type="outline-purple" text='Outline Purple' />
           </div>
         </div>
 

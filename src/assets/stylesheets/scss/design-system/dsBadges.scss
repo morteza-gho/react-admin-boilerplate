@@ -1,0 +1,50 @@
+/*********** badges style ***********/
+.badge {
+  @apply inline-flex text-base font-regular px-2 py-0.5 border border-transparent relative rounded;
+
+  .badge-content {
+    @apply inline-flex items-center gap-x-2;
+
+    .inner-badge {
+      @apply inline-flex justify-center items-center bg-black-main text-white ring-1 ring-white rounded-full w-5 h-5 text-xs font-medium leading-0;
+      
+      &.corner {
+        @apply absolute -right-2.5 -top-2.5 ring-2
+      }
+    }
+
+  } /* .badge-content */
+
+  &.badge-blue {
+    @apply bg-blue-main text-white
+  }
+  &.badge-blue-light {
+    @apply bg-blue-light text-blue-main
+  }
+  &.badge-green {
+    @apply bg-green-main text-white
+  }
+  &.badge-green-light {
+    @apply bg-green-lighter text-green-main
+  }
+  &.badge-red {
+    @apply bg-red-main text-white
+  }
+  &.badge-orange {
+    @apply bg-orange-main text-white
+  }
+  &.badge-gray {
+    @apply bg-gray-main text-white
+  }
+  &.badge-gray-light {
+    @apply bg-gray-light text-black-main
+  }
+  &.badge-black {
+    @apply bg-black-main text-white
+  }
+  &.badge-white {
+    @apply bg-white text-black-main border-gray-light
+  }
+
+}
+

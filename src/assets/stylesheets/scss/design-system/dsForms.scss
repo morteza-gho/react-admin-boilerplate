@@ -1,0 +1,471 @@
+input, select, textarea {
+  /* remove box-shaddow for all inputs and select */
+  @apply ring-offset-0 ring-0 shadow-none !important
+}
+textarea {
+  @apply h-auto resize-none !important
+}
+
+/*********** forms style ***********/
+
+.ds-form {
+  .ant-form-item {
+    .ant-row {
+      @apply flex-row
+    }
+  }
+}
+
+.form-item {
+  @apply flex flex-col relative;
+
+  .form-label {
+    @apply flex justify-between items-center;
+
+    .text {
+      @apply block text-gray-main capitalize
+    }
+    .another-text {
+      .icon {
+        @apply cursor-pointer
+      }
+    }
+  }
+
+  .input-wrapper {
+    @apply relative w-full;
+  }
+
+  .form-input {
+    @apply border border-gray-light bg-snowy-main text-black-main w-full h-full rounded transition placeholder:text-gray-light focus:border-blue-main;
+
+    &[disabled] {
+      @apply bg-gray-lighter text-gray-main cursor-not-allowed !important
+    }
+  }
+
+  .input-error, .ant-input-status-error, .ant-select-status-error {
+    @apply border-red-400 focus:border-red-400 !important;
+    
+    .ant-select-selector {
+      @apply border-0 !important
+    }
+  }
+
+  .errors-wrapper {
+    @apply text-red-main mt-1 text-sm;
+
+    .error-item {
+      @apply flex items-center gap-x-1;
+    }
+  }
+
+  .ant-select {
+    @apply w-full;
+
+    &:hover .ant-select-selector {
+      @apply border-gray-light
+    }
+    &.ant-select-focused {
+      @apply border-transparent;
+      
+      .ant-select-selector {
+        @apply border-blue-main shadow-none !important
+      }
+    } 
+    &.ant-select-disabled .ant-select-selector {
+      @apply bg-gray-lighter text-gray-main cursor-not-allowed
+    }
+
+    .ant-select-selector {
+      @apply border border-gray-light bg-snowy-main text-black-main w-full h-full items-center rounded placeholder:text-gray-light focus:border-blue-main
+    }
+
+    .ant-select-selection-search {
+      @apply h-full ml-0
+    }
+    .ant-select-selection-search-input {
+      @apply h-full !important
+    }
+    .ant-select-selection-placeholder {
+      @apply text-gray-light
+    }
+    .ant-select-arrow {
+      @apply text-blue-main text-base
+    }
+    .ant-select-clear {
+      @apply w-5 h-5 text-red-main text-xl right-2.5 top-[45%]
+    }
+
+  } /* .ant-select */
+
+  .ant-select-multiple {
+
+    .ant-select-selection-item {
+      @apply bg-gray-lighter h-full border-0 my-0 font-regular
+    }
+    .ant-select-selection-item-remove {
+      @apply -mt-0.5
+    }
+  }  /* .ant-select-multiple */
+
+  .ant-picker {
+    @apply border border-gray-light bg-snowy-main text-black-main w-full h-full items-center rounded placeholder:text-gray-light focus:border-blue-main;
+    
+    &.ant-picker-focused {
+      @apply shadow-none border-blue-main
+    }
+    &.ant-picker-status-error {
+      @apply border-red-400 focus:border-red-400
+    }
+
+  } /* .ant-picker */
+
+  .ant-form-item {
+    @apply mb-0;
+
+    .ant-col {
+      @apply min-h-max
+    }
+   
+    .ant-select {
+      @apply p-0;
+
+      .ant-select-selector {
+        @apply border-transparent;
+      }
+    }
+  
+  } /* .ant-form-item */
+
+
+} /* .form-item  */
+
+/* .form-item-stick-select {
+
+  .ant-space-compact {
+    @apply h-full
+  }
+  .ant-select {
+    @apply rounded-tr-none rounded-br-none;
+  } 
+
+} */ /* .form-item-stick-select */
+
+.form-item-has-icon {
+
+  .icons-wrapper {
+    @apply flex gap-x-2 text-gray-main absolute;
+
+    .icon {
+      @apply cursor-pointer hover:text-blue-main
+    }
+  }
+
+  &.form-item-has-icon-left {
+    .form-input {
+      @apply pl-8;
+    }
+    .icons-wrapper {
+      @apply left-2;
+    }
+  }
+  
+  &.form-item-has-icon-right {
+    .form-input {
+      @apply pr-8;
+    }
+    .icons-wrapper {
+      @apply right-3;
+    }
+  }
+
+} /* .form-item-has-icon */
+
+.form-item-stick-icon {
+  .stick-icon-wrapper {
+    @apply flex justify-center items-center h-full absolute top-0 z-10
+  }
+} 
+.form-item-stick-icon-left {
+  .stick-icon-wrapper {
+    @apply left-0 border-r border-r-gray-light
+  }
+}
+.form-item-stick-icon-right {
+  .stick-icon-wrapper {
+    @apply right-0 border-l border-l-gray-light
+  }
+}
+
+.attached-form-items {
+  @apply sm:grid;
+
+  .form-item {
+    
+    .form-input, .ant-select-selector {
+      @apply sm:rounded-none sm:border-r-0
+    }
+
+    &:first-child {
+      
+      .form-input, .ant-select-selector {
+        @apply sm:rounded-tl sm:rounded-bl
+      }
+
+    }
+
+    &:last-child {
+      
+      .form-input, .ant-select-selector {
+        @apply sm:rounded-tr sm:rounded-br sm:border-r
+      }
+      
+    }
+  
+  }
+
+} /* .attached-form-items */
+
+/* style for sm input  */
+.form-item-sm {
+  @apply mb-3;
+
+  .form-label {
+    @apply mb-1;
+    
+    .text {
+      @apply text-base font-regular
+    }
+    .another-text {
+      @apply text-sm font-regular;
+
+      .icon {
+        @apply text-lg
+      }
+    }
+  } 
+  .input-wrapper {
+     .form-input, .ant-select {
+      @apply h-[35px] xl:h-[35px] 2xl:h-[40px];
+    }
+  }
+  .form-input {
+    @apply text-base font-light py-2 px-3
+  }
+  .icons-wrapper {
+    @apply text-lg top-3
+  }
+
+  &.form-item-stick-icon .stick-icon-wrapper {
+    @apply w-8;
+    .stick-icon {
+      @apply text-lg
+    }
+  }
+  &.form-item-stick-icon-left .form-input {
+    @apply pl-10
+  }
+  &.form-item-stick-icon-right .form-input {
+    @apply pr-10
+  }
+
+  /* ant select style in sm input */
+  .ant-select-selector {
+    @apply text-base font-light py-2 px-3
+  }
+  .ant-select-selection-item {
+    @apply text-base font-light
+  }
+
+  &.form-item-stick-select {
+    .ant-select-selector, .ant-select-selection-item {
+      @apply text-base
+    }
+  } 
+
+  .ant-select-multiple {
+    .ant-select-selection-item {
+      @apply py-0 px-1.5 text-sm rounded-sm
+    }
+  }
+
+  .ant-picker-input input {
+    @apply text-base font-regular
+  }
+
+} /* .form-item-sm */
+
+/* style for md input  */
+.form-item-md {
+  @apply mb-5;
+
+  .form-label {
+    @apply mb-1;
+    
+    .text {
+      @apply text-lg font-regular
+    }
+    .another-text {
+      @apply text-base font-regular;
+
+      .icon {
+        @apply text-xl
+      }
+    }
+  } 
+  .input-wrapper {
+     .form-input, .ant-select {
+      @apply h-[40px] xl:h-[45px] 2xl:h-[50px];
+    }
+  }
+  .form-input {
+    @apply text-lg font-light py-2 px-3
+  }
+  .icons-wrapper {
+    @apply text-xl top-4
+  }
+
+  &.form-item-stick-icon .stick-icon-wrapper {
+    @apply w-10;
+    .stick-icon {
+      @apply text-xl
+    }
+  }
+  &.form-item-stick-icon-left .form-input {
+    @apply pl-12
+  }
+  &.form-item-stick-icon-right .form-input {
+    @apply pr-12
+  }
+
+  /* ant select style in md input */
+  .ant-select-selector {
+    @apply text-lg font-light py-1  px-3 2xl:py-2
+  }
+  .ant-select-selection-item {
+    @apply text-lg font-light
+  }
+
+  &.form-item-stick-select {
+    .ant-select-selector, .ant-select-selection-item {
+      @apply text-base
+    }
+  } 
+
+  .ant-select-multiple {
+    .ant-select-selection-item {
+      @apply py-1 px-1.5 text-sm rounded-sm
+    }
+  }
+
+  .ant-picker-input input {
+    @apply text-lg font-light
+  }
+
+} /* .form-item-md */
+
+
+/* style for lg input */
+.form-item-lg {
+  @apply mb-7;
+
+  .form-label {
+    @apply mb-2;
+
+    .text {
+      @apply text-xl font-medium
+    }
+    .another-text {
+      @apply text-lg font-regular;
+      
+      .icon {
+        @apply text-2xl
+      }
+    }
+  }
+  .input-wrapper {
+    .form-input, .ant-select {
+     @apply h-[45px] xl:h-[50px] 2xl:h-[60px];
+   }
+ }
+  .form-input {
+    @apply text-xl font-regular py-3 px-4
+  }
+  .icons-wrapper {
+    @apply text-2xl top-3.5 mt-0.5 xl:top-4 xl:mt-0
+  }
+
+  &.form-item-stick-icon .stick-icon-wrapper {
+    @apply w-12;
+    .stick-icon {
+      @apply text-2xl
+    }
+  }
+  &.form-item-stick-icon-left .form-input {
+    @apply pl-14
+  }
+  &.form-item-stick-icon-right .form-input {
+    @apply pr-14
+  }
+
+
+  /* ant select style in lg input */
+  .ant-select-selector {
+    @apply text-xl font-regular py-2 2xl:py-3 px-4
+  }
+  .ant-select-selection-item {
+    @apply text-xl font-regular
+  }
+
+  &.form-item-stick-select {
+    .ant-select-selector, .ant-select-selection-item {
+      @apply text-lg font-light
+    }
+  }
+
+  .ant-select-multiple {
+    .ant-select-selection-item {
+      @apply py-1 px-2 text-base rounded 
+    }
+  }
+
+  .ant-picker-input input {
+    @apply text-xl font-regular
+  }
+
+} /* .form-item-lg  */
+
+.multiple-select {
+
+  .ant-select-item-option {
+    @apply items-center text-base font-regular;
+
+    &:hover {
+      @apply bg-gray-lighter !important
+    }
+    
+    &:before {
+      content: '';
+      @apply border border-black-main w-5 h-5 mr-2 rounded-sm
+    }
+
+    &.ant-select-item-option-selected {
+      @apply bg-transparent text-blue-main font-regular;
+
+      &:before {
+        @apply border-blue-main bg-blue-main
+      }
+      .ant-select-item-option-state {
+        @apply text-snowy-main
+      }
+
+    } 
+
+    .ant-select-item-option-state {
+      @apply absolute left-4 top-1 xl:top-0.5 2xl:left-3.5 2xl:top-0.5 text-base
+    }
+
+  } /* .ant-select-item-option */
+
+} /* .multiple-select */

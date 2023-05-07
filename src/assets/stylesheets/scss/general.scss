@@ -1,0 +1,71 @@
+/* light mode colors */
+:root {
+  --black-main: #2C3E50;
+  --snowy-main: #FFF;
+  --dark-main: #000;
+
+  --gray-main: #707070;
+  --gray-light: #DBDDDF; 
+  --gray-lighter: #F2F2F3; 
+  --gray-lightest: #F8F8F8;
+
+  --blue-main: #0077B7;
+  --blue-light: #D9EBF4;
+  --blue-lighter: #E3F1FA;
+  --blue-lightest: #F4FBFF;
+
+  --red-main: #E84C3C;
+  --red-lighter: #E84C3C26;
+
+  --yellow-main: #FFB703;
+
+  --orange-main: #FF9A03;
+
+  --green-main: #00B21B;
+  --green-secondary: #25CE2B;
+  --green-light: #7ED321;
+  --green-lighter: #00B21B26;
+}
+  
+/* dark mode colors */
+.dark {
+  --black-main: #FFF;
+  --snowy-main: #2C3E50;
+  --dark-main: #FFF;
+
+  --gray-main: #707070;
+  --gray-light: #DBDDDF; 
+  --gray-lighter: #F2F2F3; 
+  --gray-lightest: #F8F8F8;
+
+  --blue-main: #0077B7;
+  --blue-light: #D9EBF4;
+  --blue-lighter: #E3F1FA;
+  --blue-lightest: #F4FBFF;
+
+  --red-main: #E84C3C;
+  --red-lighter: #E84C3C26;
+
+  --yellow-main: #FFB703;
+
+  --orange-main: #FF9A03;
+
+  --green-main: #00B21B;
+  --green-secondary: #25CE2B;
+  --green-light: #7ED321;
+  --green-lighter: #00B21B26;
+}
+
+html {
+  font-size: 16px;
+
+  @screen 2xl {
+    font-size: 18px;
+  }
+
+}
+body {
+  @apply bg-white
+}
+
+

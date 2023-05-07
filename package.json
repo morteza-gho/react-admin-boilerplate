@@ -1,0 +1,30 @@
+{
+  "name": "react-admin-boilerplate",
+  "version": "1.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "@types/react-router-dom": "^5.3.3",
+    "antd": "^5.4.7",
+    "postcss-nesting": "^11.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.11.1",
+    "tailwind-scrollbar": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5"
+  }
+}

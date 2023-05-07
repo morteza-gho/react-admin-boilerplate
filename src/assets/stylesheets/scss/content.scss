@@ -1,0 +1,35 @@
+.content-wrapper {
+  @apply md:ml-[200px] h-[100vh] transition-all;
+
+  &.full-width {
+    @apply ml-0 !important
+  }
+}
+
+.main-content {
+  @apply h-full bg-white p-4 overflow-auto scrollbar-thin scrollbar-thumb-stone-800;
+}
+
+.ds-section {
+  scroll-margin: 200px;
+  @apply border border-gray-300 mb-8 rounded overflow-hidden;
+
+  .ds-section-title {
+    @apply text-xl font-bold px-4 py-2 bg-gray-200 rounded-t;
+  }
+
+  .ds-section-content {
+    @apply p-4;
+  }
+
+  .ds-section-vaients {
+    @apply mb-12;
+
+    .varients-title {
+      @apply text-lg font-semibold mb-4
+    }
+
+  }
+
+} /* .ds-section */
+

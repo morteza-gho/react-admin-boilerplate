@@ -1,0 +1,5 @@
+/* @import url('./assets/stylesheets/style.css'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,294 @@
+/*********** checkboxes and radios style ***********/
+.custom-checkbox, .custom-radio {
+  @apply flex items-center;
+
+  .checkbox[disabled], .radio[disabled] {
+    @apply opacity-30 cursor-not-allowed bg-stone-800 border-gray-400 hover:border-gray-400 checked:border-gray-500 invert;
+
+    &+label {
+      @apply text-gray-light cursor-not-allowed
+    }
+  }
+  label {
+    @apply inline-block text-base text-black-main cursor-pointer
+  }
+  .checkbox, .radio {
+    @apply w-4 h-4 border border-black-main rounded-sm cursor-pointer transition focus:ring-0 focus:ring-offset-0
+  }
+
+  /* ant design style */
+  .ant-checkbox-wrapper, .ant-radio-wrapper {
+    @apply inline-flex items-center text-base;
+
+
+    .ant-checkbox, .ant-radio {
+      @apply text-black-main top-0;
+
+      &.ant-checkbox-disabled{
+        &.ant-checkbox-checked .ant-checkbox-inner {
+          @apply bg-gray-lighter border-gray-300 !important;
+        }
+      }
+
+      &.ant-radio-disabled {
+        .ant-radio-inner {
+          @apply bg-gray-lighter border-gray-300 !important;
+        }
+        &.ant-radio-checked .ant-radio-inner:after {
+          @apply bg-gray-300;
+        }
+      }
+
+    } /* .ant-checkbox, .ant-radio */
+
+    .ant-checkbox-inner {
+      @apply w-4 h-4 border-black-main rounded-sm;
+
+      &:after {
+        @apply w-1.5 h-2.5
+      }
+
+    }
+    .ant-radio-inner {
+      @apply w-4 h-4 border-black-main shadow-none;
+    }
+
+    &.checkbox-circle {
+      .ant-checkbox-inner {
+        @apply rounded-full
+      }
+      .ant-checkbox-checked:after {
+        @apply rounded-full
+      }
+    }
+
+    &.checkbox-xl {
+      .ant-checkbox-input {
+        @apply w-8 h-8
+      }
+      .ant-checkbox-inner {
+        @apply w-8 h-8;
+        &:after {
+          @apply w-2.5 h-5 -mt-0.5
+        }
+      }
+    }
+    &.checkbox-lg {
+      @apply text-lg;
+      
+      .ant-checkbox-input {
+        @apply w-6 h-6
+      }
+      .ant-checkbox-inner {
+        @apply w-6 h-6;
+        &:after {
+          @apply w-2 h-4 -mt-0.5
+        }
+      }
+    }
+
+    &.radio-xl {
+      @apply text-xl;
+
+      .ant-radio-input {
+        @apply w-8 h-8
+      }
+      .ant-radio-inner {
+        @apply w-8 h-8;
+        &:after {
+          @apply w-8 h-8 -mt-4 -ml-4
+        }
+      }
+    }
+    &.radio-lg {
+      @apply text-lg;
+
+      .ant-radio-input {
+        @apply w-6 h-6
+      }
+      .ant-radio-inner {
+        @apply w-6 h-6;
+        &:after {
+          @apply w-6 h-6 -mt-3 -ml-3
+        }
+      }
+    }
+
+    &.checkbox-black {
+      &:hover {
+        .ant-checkbox-inner {
+          @apply border-black-main
+        }
+      }
+      .ant-checkbox-checked {
+        &:after {
+          @apply border-black-main
+        }
+        .ant-checkbox-inner {
+          @apply border-black-main bg-black-main
+        }
+      }
+    } /* .checkbox-black */
+
+    &.checkbox-blue {
+      &:hover {
+        .ant-checkbox-inner {
+          @apply border-blue-main
+        }
+      }
+      .ant-checkbox-checked {
+        &:after {
+          @apply border-blue-main
+        }
+        .ant-checkbox-inner {
+          @apply border-blue-main bg-blue-main
+        }
+      }
+    } /* .checkbox-blue */
+
+    &.checkbox-yellow {
+      &:hover {
+        .ant-checkbox-inner {
+          @apply border-yellow-main
+        }
+      }
+      .ant-checkbox-checked {
+        &:after {
+          @apply border-yellow-main
+        }
+        .ant-checkbox-inner {
+          @apply border-yellow-main bg-yellow-main
+        }
+      }
+    } /* .checkbox-blue */
+
+    &.radio-black {
+      /* &:hover {
+        .ant-radio-inner {
+          @apply border-black-main
+        }
+      } */
+      .ant-radio-checked {
+        &:after {
+          @apply bg-black-main
+        }
+        .ant-radio-inner {
+          @apply border-black-main;
+
+          &:after {
+            @apply bg-black-main
+          }
+        }
+      }
+    } /* .radio-black */
+
+    &.radio-blue {
+      /* &:hover {
+        .ant-radio-inner {
+          @apply border-blue-main
+        }
+      } */
+      .ant-radio-checked {
+        &:after {
+          @apply bg-blue-main
+        }
+        .ant-radio-inner {
+          @apply border-blue-main;
+
+          &:after {
+            @apply bg-blue-main
+          }
+        }
+      }
+    } /* .radio-black */
+
+    &.radio-yellow {
+      /* &:hover {
+        .ant-radio-inner {
+          @apply border-yellow-main
+        }
+      } */
+      .ant-radio-checked {
+        &:after {
+          @apply bg-yellow-main
+        }
+        .ant-radio-inner {
+          @apply border-yellow-main;
+
+          &:after {
+            @apply bg-yellow-main
+          }
+        }
+      }
+    } /* .radio-yellow */
+  
+  } /* .ant-checkbox-wrapper */
+
+} /* .custom-checkbox, .custom-radio */
+
+.checkbox-xl, .radio-xl {
+  label {
+    @apply text-xl
+  }
+}
+.checkbox-lg, .radio-lg {
+  label {
+    @apply text-lg
+  }
+}
+.checkbox-xl .checkbox, .radio-xl .radio {
+  @apply w-8 h-8
+}
+.checkbox-lg .checkbox, .radio-lg .radio {
+  @apply w-6 h-6
+}
+
+.checkbox-blue .checkbox, .radio-blue .radio {
+  @apply border-black-main hover:border-blue-main checked:text-blue-main checked:border-blue-main;
+}
+
+.checkbox-yellow .checkbox, .radio-yellow .radio {
+  @apply border-black-main hover:border-yellow-main checked:text-yellow-main checked:border-yellow-main;
+  /* &:checked {
+    +label {
+      @apply text-yellow-main
+    }
+  } */
+}
+
+.checkbox-black .checkbox, .radio-black .radio {
+  @apply border-black-main hover:border-black-main checked:text-black-main checked:border-black-main;
+}
+
+.checkbox-bordered, .radio-bordered {
+  @apply inline-flex border border-gray-light bg-white rounded px-3;
+
+  label {
+    @apply w-full h-full py-2
+  }
+}
+
+.checkbox-circle .checkbox {
+  @apply rounded-full
+}
+
+/* specialy for radios */
+.custom-radio .radio {
+  @apply rounded-full
+}
+.radio-separated {
+  @apply flex justify-between mb-1;
+
+  label {
+    @apply ml-0 !important
+  }
+
+  .ant-radio-wrapper {
+    @apply mr-0 w-full;
+
+    .ant-radio {
+      @apply absolute right-0 top-0.5
+    }
+  }
+
+} /* .radio-separated */

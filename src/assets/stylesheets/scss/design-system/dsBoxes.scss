@@ -1,0 +1,21 @@
+/*********** boxes style ***********/
+.box {
+  @apply border p-8 rounded-lg;
+
+  &.box-blue-light {
+    @apply border-blue-light bg-blue-lightest;
+  }
+  &.box-red-light {
+    @apply border-red-lighter bg-red-lighter;
+  }
+  &.box-gray-light {
+    @apply border-gray-light bg-gray-lighter;
+  }
+  &.box-gray-lighter {
+    @apply border-gray-lighter bg-gray-lightest;
+  }
+  &.box-white {
+    @apply border-gray-light bg-white;
+  }
+
+}

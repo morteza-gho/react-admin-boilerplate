@@ -1,0 +1,57 @@
+/*********** tabs style ***********/
+.tabs {
+  @apply flex bg-white border border-gray-100 divide-x divide-gray-100 rounded-lg overflow-hidden;
+
+  .tab-button {
+    @apply flex-1 text-blue-main hover:bg-blue-light
+  }
+  .tab-button {
+    &.active {
+      @apply bg-blue-light
+    }
+    &.disabled {
+      @apply bg-gray-100 text-gray-300 cursor-not-allowed
+    }
+  } /* .tab-button */
+
+} /* .tabs */
+ 
+.tabs-md {
+  .tab-button {
+    @apply text-lg font-regular px-4 py-3
+  }
+  .tab-button {
+    &.active {
+      @apply font-medium
+    }
+  }
+} /* .tabs-md  */
+
+
+ 
+.tabs-lg {
+  .tab-button {
+    @apply text-xl px-5 py-5;
+
+    &.active {
+      @apply font-semibold
+    }
+
+  }
+} /* .tabs-lg */
+
+.tabs-flat {
+  @apply rounded-none;
+
+  .tab-button.active {
+    @apply border-b-blue-main
+  }
+
+  &.tabs-md .tab-button.active {
+    @apply border-b-2 border-b-blue-main pt-2.5
+  }
+  &.tabs-lg .tab-button.active {
+    @apply border-b-4 border-b-blue-main pt-5
+  }
+
+} /* .tabs-flat  */

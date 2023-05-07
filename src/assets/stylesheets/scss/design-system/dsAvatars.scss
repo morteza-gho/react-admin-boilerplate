@@ -1,0 +1,146 @@
+/*********** avatar style ***********/
+.avatar {
+  @apply relative aspect-square;
+
+  img {
+    @apply aspect-square object-contain
+  }
+  .badge-avatar {
+    @apply flex items-center justify-center leading-0 p-1.5 absolute rounded-full ring-1 ring-white
+  }
+
+}
+
+.avatar-circle {
+  
+  img {
+    @apply rounded-full
+  }
+  .badge-avatar {
+    &.has-content {
+      @apply /* -right-1 -top-1 */ text-xs font-bold
+    }
+  }
+
+} /* .avatar-circle */
+
+.avatar-rounded {
+
+  img {
+    @apply rounded
+  }
+  .badge-avatar {
+    &.has-content {
+      @apply text-xs font-bold
+    }
+  }
+
+}  /* .avatar-rounded */
+
+.avatar-xs {
+  @apply w-[35px];
+
+  .badge-avatar {
+    @apply w-[5px] h-[5px] p-1
+  }
+
+  &.avatar-circle .badge-avatar {
+    @apply -right-0 -top-0;
+    
+    &.has-content {
+      @apply -right-1 -top-1 w-[16px] h-[16px]
+    }
+  }
+
+  &.avatar-rounded .badge-avatar {
+    @apply -right-0.5 -top-0.5;
+
+    &.has-content {
+      @apply -right-1 -top-1 w-[16px] h-[16px]
+    }
+  }
+
+} /* .avatar-sm */
+
+.avatar-sm {
+  @apply w-[48px];
+
+  .badge-avatar {
+    @apply w-[12px] h-[12px]
+  }
+
+  &.avatar-circle .badge-avatar {
+    @apply right-0 top-0;
+    
+    &.has-content {
+      @apply -right-1.5 -top-1.5 w-[20px] h-[20px]
+    }
+  }
+
+  &.avatar-rounded .badge-avatar {
+    @apply -right-1 -top-1;
+
+    &.has-content {
+      @apply -right-1.5 -top-1.5 w-[20px] h-[20px]
+    }
+  }
+
+} /* .avatar-sm */
+
+.avatar-md {
+  @apply w-[80px];
+
+  .badge-avatar {
+    @apply w-[18px] h-[18px] 
+  }
+
+  &.avatar-rounded img {
+    @apply rounded-lg
+  }
+
+  &.avatar-circle .badge-avatar {
+    @apply right-0.5 top-0.5;
+
+    &.has-content {
+      @apply right-0 top-0 w-[24px] h-[24px]
+    }
+  }
+
+  &.avatar-rounded .badge-avatar {
+    @apply -right-1.5 -top-1.5;
+
+    &.has-content {
+      @apply -right-1.5 -top-1.5 w-[24px] h-[24px]
+    }
+  }
+
+} /* .avatar-sm */
+
+.avatar-lg {
+  @apply w-[175px];
+
+  .badge-avatar {
+    @apply w-[24px] h-[24px]
+  }
+
+  &.avatar-rounded img {
+    @apply rounded-xl
+  }
+
+  &.avatar-circle .badge-avatar {
+    @apply right-3 top-3;
+    
+    &.has-content {
+      @apply right-3 top-3 w-[28px] h-[28px]
+    }
+  }
+
+  &.avatar-rounded .badge-avatar {
+    @apply -right-1.5 -top-1.5;
+
+    &.has-content {
+      @apply -right-1.5 -top-1.5 w-[28px] h-[28px]
+    }
+  }
+
+} /* .avatar-sm */

@@ -1,0 +1,6 @@
+@import url('./scss/tailwind.scss');
+@import url('./scss/design-system/design-system.scss');
+@import url('./scss/general.scss');
+@import url('./scss/header.scss');
+@import url('./scss/sidebar.scss');
+@import url('./scss/content.scss');

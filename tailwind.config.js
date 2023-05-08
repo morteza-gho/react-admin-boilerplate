@@ -11,6 +11,7 @@ module.exports = {
         heavy: 800, // equal to extrabold in tailwind 
       },
       colors: {
+        back: '#333',
         snowy: {
           main: 'var(--snowy-main)'
         },

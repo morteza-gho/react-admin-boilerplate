@@ -56,6 +56,10 @@ const App = () => {
     {
       key: 'Dialogs', icon: <HiRocketLaunch />, label: 'Dialogs', target: '/app/Dialogs'
     }
+    ,
+    {
+      key: 'Texts', icon: <HiDocumentText />, label: 'Texts', target: '/app/Texts'
+    }
     
   ]
 

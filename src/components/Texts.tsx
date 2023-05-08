@@ -1,8 +1,7 @@
-import React from "react";
-import { FC } from "react";
-import DsText from "../text/DsText";
+import React, { FC } from "react";
+import DsText from "../designSystem/components/text/DsText";
 
-const DsTexts: FC = () => {
+const Texts: FC = () => {
   return (
     <section id="ds-texts" className="ds-section">
       <h2 className="ds-section-title">Text</h2>
@@ -38,7 +37,6 @@ const DsTexts: FC = () => {
           <p className="mb-2"><DsText fontWeight="thin">this is a "thin" font weight</DsText></p>
           <p className="mb-2"><DsText fontWeight="extralight">this is a "extraLight" font weight</DsText></p>
           <p className="mb-2"><DsText fontWeight="light">this is a "light" font weight</DsText></p>
-          <p className="mb-2"><DsText fontWeight="regular">this is a "regular" | "normal" font weight</DsText></p>
           <p className="mb-2"><DsText fontWeight="medium">this is a "medium" font weight</DsText></p>
           <p className="mb-2"><DsText fontWeight="semibold">this is a "semibold" font weight</DsText></p>
           <p className="mb-2"><DsText fontWeight="bold">this is a "bold font weight</DsText></p>
@@ -63,39 +61,39 @@ const DsTexts: FC = () => {
           <hr className="mb-4 mt-4" />
 
           <h4 className="varients-title">color and hover color</h4>
-          <p className="mb-2"><DsText color="black-main">this is a "black-main" text color</DsText></p>
-          <p className="mb-2"><DsText color="gray-main">this is a "gray-main" text color</DsText></p>
-          <p className="mb-2"><DsText color="blue-main">this is a "blue-main" text color</DsText></p>
-          <p className="mb-2"><DsText color="red-main">this is a "red-main" text color</DsText></p>
-          <p className="mb-2"><DsText color="yellow-main">this is a "yellow-main" text color</DsText></p>
-          <p className="mb-2"><DsText color="orange-main">this is a "orange-main" text color</DsText></p>
-          <p className="mb-2"><DsText color="green-main">this is a "green-main" text color</DsText></p>
+          <p className="mb-2"><DsText className="text-stone-800">this is a "black" text color</DsText></p>
+          <p className="mb-2"><DsText className="text-gray-600">this is a "gray" text color</DsText></p>
+          <p className="mb-2"><DsText className="text-blue-600">this is a "blue" text color</DsText></p>
+          <p className="mb-2"><DsText className="text-red-600">this is a "red" text color</DsText></p>
+          <p className="mb-2"><DsText className="text-yellow-600">this is a "yellow" text color</DsText></p>
+          <p className="mb-2"><DsText className="text-orange-600">this is a "orange" text color</DsText></p>
+          <p className="mb-2"><DsText className="text-green-600">this is a "green" text color</DsText></p>
           <p className="mb-2"><DsText customColor="#a11fa1">this is a text with custom color</DsText></p>
-          <p className="mb-2"><DsText color="black-main" hoverColor="red-main">this is a text with hover color</DsText></p>
+          <p className="mb-2"><DsText className="stroke-stone-800 hover:text-red-600">this is a text with hover color</DsText></p>
 
           <hr className="mb-4 mt-4" />
 
           <h4 className="varients-title">Text align</h4>
           <p className="mb-2">
-            <DsText align="left">
+            <DsText align="left" display="block">
               <span className="text-blue-main">left:</span>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam blanditiis dicta officiis nemo repudiandae omnis atque, eaque laborum accusantium ex illo saepe quia repellat quae odit modi ducimus rem facere.
             </DsText>
           </p>
           <p className="mb-2">
-            <DsText align="right">
+            <DsText align="right" display="block">
               <span className="text-blue-main">right:</span>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam blanditiis dicta officiis nemo repudiandae omnis atque, eaque laborum accusantium ex illo saepe quia repellat quae odit modi ducimus rem facere.
             </DsText>
           </p>
           <p className="mb-2">
-            <DsText align="center">
+            <DsText align="center" display="block">
               <span className="text-blue-main">center:</span>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam blanditiis dicta officiis nemo repudiandae omnis atque, eaque laborum accusantium ex illo saepe quia repellat quae odit modi ducimus rem facere.
             </DsText>
           </p>
           <p className="mb-2">
-            <DsText align="justify">
+            <DsText align="justify" display="block">
               <span className="text-blue-main">justify:</span>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam blanditiis dicta officiis nemo repudiandae omnis atque, eaque laborum accusantium ex illo saepe quia repellat quae odit modi ducimus rem facere.
             </DsText>
@@ -254,4 +252,4 @@ const DsTexts: FC = () => {
   );
 };
 
-export default DsTexts;
+export default Texts;

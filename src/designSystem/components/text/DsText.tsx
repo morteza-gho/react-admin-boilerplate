@@ -33,13 +33,11 @@ import React, { FC, ReactNode } from "react";
 interface IPropTypes {
   fontFamily?: string,
   fontSize?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl', // base on tailwind
-  fontSizeMobile?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl', // base on tailwind
   customFontSize?: number, // take font-size as `px` and convert it to `rem` => user send 16 => font-size="1rem"
-  fontWeight?: 'thin' | 'extralight' | 'light' | 'regular' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black', // base on tailwind config | regular is equal to normal
-  italic?: boolean,
-  color?: 'snowy-main' | 'black-main' | 'gray-main' | 'blue-main' | 'red-main' | 'yellow-main' | 'orange-main' | 'green-main', // base on tailwind custom config
+  fontWeight?: 'thin' | 'extralight' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black', // base on tailwind config
+  // color?: 'white' | 'black-main' | 'gray-main' | 'blue-main' | 'red-main' | 'yellow-main' | 'orange-main' | 'green-main', // base on tailwind custom config
   customColor?: string,
-  hoverColor?: 'snowy-main' | 'black-main' | 'gray-main' | 'blue-main' | 'red-main' | 'yellow-main' | 'orange-main' | 'green-main', // base on tailwind custom config
+  // hoverColor?: 'white' | 'black-main' | 'gray-main' | 'blue-main' | 'red-main' | 'yellow-main' | 'orange-main' | 'green-main', // base on tailwind custom config
   children: ReactNode,
   truncate?: boolean,
   lineHeight?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '12' | '14' | '16' | '18' | '20' | '22' | '24' | '26' | '28' | '30' | '32', // base on tailwind and tailwind custom config
@@ -47,9 +45,9 @@ interface IPropTypes {
   lineClamp?: '1' | '2' | '3' | '4' | '5' | '6',
   transform?: 'normal-case' | 'uppercase' | 'lowercase' | 'capitalize',
   align?: 'left' | 'right' | 'center' | 'justify'
+  italic?:boolean,
   id?: string,
   display?: 'inline' | 'inline-block' | 'block' | 'flex' | 'inline-flex',
-  underline?: boolean,
   nonResponsive?: boolean, // prevent to convert `px` to `rem` to prevent responsive `font-size`
   className?: string,
   onClick?: () => void
@@ -61,9 +59,9 @@ const DsText: FC<IPropTypes> = ({
   fontSize = customFontSize ? '' : 'base',
   fontWeight = 'medium',
   italic,
-  color,
+  // color,
   customColor,
-  hoverColor,
+  // hoverColor,
   children,
   truncate = false,
   lineHeight,
@@ -73,7 +71,6 @@ const DsText: FC<IPropTypes> = ({
   align,
   id,
   display,
-  underline = false,
   nonResponsive,
   className = '',
   onClick
@@ -87,7 +84,8 @@ const DsText: FC<IPropTypes> = ({
   return (
     <span
       id={id}
-      className={`ds-text ${`text-${fontSize}`} font-${fontWeight} ${color ? `text-${color}` : ''} ${hoverColor ? `cursor-pointer hover:text-${hoverColor}` : ''} ${align ? `text-${align}` : ''} ${truncate ? 'block truncate' : ''} ${italic ? 'italic' : ''} ${transform ? transform : ''} ${lineHeight ? `leading-${lineHeight}` : ''} ${lineClamp ? `line-clamp-${lineClamp}` : ''} ${display ? display : ''} ${underline ? 'curved-underline' : ''} ${onClick ? 'cursor-pointer' : ''} ${className}`}
+      /* ${color ? `text-${color}` : ''} ${hoverColor ? `cursor-pointer hover:text-${hoverColor}` : ''} */
+      className={`ds-text ${`text-${fontSize}`} font-${fontWeight} ${align ? `text-${align}` : ''} ${truncate ? 'block truncate' : ''} ${italic ? 'italic' : ''} ${transform ? transform : ''} ${lineHeight ? `leading-${lineHeight}` : ''} ${lineClamp ? `line-clamp-${lineClamp}` : ''} ${display ? display : ''} ${onClick ? 'cursor-pointer' : ''} ${className}`}
       style={{
         fontFamily: fontFamily ? fontFamily : '',
         color: customColor ? customColor : '',

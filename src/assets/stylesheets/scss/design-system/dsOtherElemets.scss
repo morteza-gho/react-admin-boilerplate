@@ -1,26 +1,7 @@
 /*********** others elements style ***********/
 
 .ds-text {
-  @apply text-black-main;
 
-  &.curved-underline {
-    position: relative;
-
-    &:after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      width: 100%;
-      height: 10px;
-      background-image: url('/img/line-orange.png');
-      background-size: 100% 10px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      left: 0;
-      right: 0;
-      bottom: -12px;
-    }
-  } /* .underline */
 
 } /* .ds-text */
 

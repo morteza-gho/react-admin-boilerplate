@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { Form } from "antd";
-import React from "react";
 import { IRadioItem } from "../designSystem/components/checkboxRadios/type";
 import DsForm from "../designSystem/components/forms/DsForm";
 import DsCheckboxRadio from "../designSystem/components/checkboxRadios/DsCheckboxRadio";

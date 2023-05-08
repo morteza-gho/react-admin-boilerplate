@@ -4,7 +4,7 @@ import { Breadcrumb, Layout, Menu } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { HiInbox, HiMenu } from 'react-icons/hi';
 import DsButton from './designSystem/components/buttons/DsButton';
-import { HiCheck, HiCheckCircle, HiDocumentText, HiExclamationTriangle, HiHome } from 'react-icons/hi2';
+import { HiCheck, HiCheckCircle, HiDocumentText, HiExclamationTriangle, HiHome, HiUserCircle } from 'react-icons/hi2';
 
 const App = () => {
 
@@ -43,6 +43,9 @@ const App = () => {
     },
     {
       key: 'FormValidation', icon: <HiExclamationTriangle />, label: 'FormValidation', target: '/app/FormValidation'
+    },
+    {
+      key: 'Avatars', icon: <HiUserCircle />, label: 'Avatars', target: '/app/Avatars'
     }
   ]
 

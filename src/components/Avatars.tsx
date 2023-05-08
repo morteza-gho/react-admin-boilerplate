@@ -1,8 +1,7 @@
-import React from "react";
-import { FC } from "react";
-import DsAvatar from '../avatars/DsAvatar';
+import React, { FC } from "react";
+import DsAvatar from './../designSystem/components/avatars/DsAvatar';
 
-const DsAvatars: FC = () => {
+const Avatars: FC = () => {
   return (
     <section id="ds-avatars" className="ds-section">
       <h2 className="ds-section-title">Avatars</h2>
@@ -79,7 +78,7 @@ const DsAvatars: FC = () => {
 
           <div className="ds-section-vaients flex-1">
             <h4 className="varients-title">Circle - Large</h4>
-            <div className="flex gap-x-4">
+            <div className="flex gap-x-2">
               <DsAvatar type="circle" size="lg" image="https://i.pravatar.cc/400?img=12" alt="small avatar" />
               <DsAvatar type="circle" size="lg" image="https://i.pravatar.cc/400?img=30" alt="small avatar" hasBadge badgeColor="green" />
               <DsAvatar type="circle" size="lg" image="https://i.pravatar.cc/400?img=2" alt="small avatar" hasBadge badgeColor="red" badgeContent="5" />
@@ -88,7 +87,7 @@ const DsAvatars: FC = () => {
 
           <div className="ds-section-vaients flex-1">
             <h4 className="varients-title">Rounded - Large</h4>
-            <div className="flex gap-x-4">
+            <div className="flex gap-x-2">
               <DsAvatar type="rounded" size="lg" image="https://i.pravatar.cc/400?img=12" alt="small avatar" />
               <DsAvatar type="rounded" size="lg" image="https://i.pravatar.cc/400?img=30" alt="small avatar" hasBadge badgeColor="green" />
               <DsAvatar type="rounded" size="lg" image="https://i.pravatar.cc/400?img=2" alt="small avatar" hasBadge badgeColor="red" badgeContent="5" />
@@ -103,4 +102,4 @@ const DsAvatars: FC = () => {
   );
 };
 
-export default DsAvatars;
+export default Avatars;

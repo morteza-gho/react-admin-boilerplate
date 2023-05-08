@@ -1,5 +1,5 @@
+import React, { FC, ReactNode } from "react";
 import { Modal } from "antd";
-import { FC, ReactNode } from "react";
 import { HiOutlineCheckBadge, HiOutlineExclamationTriangle, HiOutlineInformationCircle, HiOutlineShieldExclamation } from "react-icons/hi2";
 
 interface IPropTypes {

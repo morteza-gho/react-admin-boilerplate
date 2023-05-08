@@ -3,7 +3,7 @@
   @apply my-8 w-full !important;
 
   .ant-modal-close {
-    @apply w-10 h-10 mr-4 mt-4;
+    @apply w-10 h-10 hover:bg-transparent;
 
     .ant-modal-close-x {
       @apply w-10 h-10 flex justify-center items-center bg-black-main text-white rounded-full m-0 text-lg transition hover:bg-red-main
@@ -22,7 +22,7 @@
     @apply p-0 !important;
   }
   .ant-modal-content {
-    @apply my-0 mx-auto
+    @apply my-0 mx-auto p-0 max-w-full
   }
   .ant-modal-footer {
     @apply border-t border-t-gray-light

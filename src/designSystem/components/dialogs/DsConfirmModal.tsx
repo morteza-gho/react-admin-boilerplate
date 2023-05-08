@@ -1,5 +1,5 @@
+import React, { FC, ReactNode } from "react";
 import { Modal } from "antd";
-import { FC, ReactNode } from "react";
 import { HiOutlineExclamationTriangle, HiOutlineShieldExclamation } from "react-icons/hi2";
 import DsButton from "../buttons/DsButton";
 

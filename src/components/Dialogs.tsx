@@ -1,9 +1,9 @@
-import { FC, useState } from "react";
+import React, { FC, useState } from "react";
 import { HiHand } from "react-icons/hi";
-import DsModal from "./DsModal";
-import DsAlertModal from './DsAlertModal';
-import DsConfirmModal from "./DsConfirmModal";
-import React from "react";
+import DsAlertModal from "../designSystem/components/dialogs/DsAlertModal";
+import DsConfirmModal from "../designSystem/components/dialogs/DsConfirmModal";
+import DsModal from "../designSystem/components/dialogs/DsModal";
+import DsButton from './../designSystem/components/buttons/DsButton';
 
 const DsDialogs: FC = () => {
 
@@ -30,9 +30,9 @@ const DsDialogs: FC = () => {
           <h4 className="varients-title">Modals</h4>
 
           <div className='flex items-start gap-x-4'>
-            <button className='btn btn-md btn-blue' onClick={() => setIsSmModalOpen(true)}>Modal Small</button>
-            <button className='btn btn-md btn-blue' onClick={() => setIsMdModalOpen(true)}>Modal Medium</button>
-            <button className='btn btn-md btn-blue' onClick={() => setIsLgModalOpen(true)}>Modal Large</button>
+            <DsButton type="default" size="base" text="Modal Small" onClick={() => setIsSmModalOpen(true)} />
+            <DsButton type="default" size="base" text="Modal Medium" onClick={() => setIsMdModalOpen(true)} />
+            <DsButton type="default" size="base" text="Modal Large" onClick={() => setIsLgModalOpen(true)} />
           </div>
 
           <DsModal size="sm" title="Modal Small" open={isSmModalOpen} onClose={() => setIsSmModalOpen(false)}>
@@ -74,11 +74,12 @@ const DsDialogs: FC = () => {
           <h4 className="varients-title">Alerts</h4>
 
           <div className='flex items-start gap-x-4'>
-            <button className='btn btn-md btn-green-secondary' onClick={() => setIsSuccessAlertOpen(true)}>Success Alert</button>
-            <button className='btn btn-md btn-red' onClick={() => setIsDangerAlertOpen(true)}>Danger Alert</button>
-            <button className='btn btn-md btn-yellow' onClick={() => setIsWarningAlertOpen(true)}>Warning Alert</button>
-            <button className='btn btn-md btn-blue' onClick={() => setIsInfoAlertOpen(true)}>Info Alert</button>
-            <button className='btn btn-md btn-black' onClick={() => setIsContentAlertOpen(true)}>Alert with content</button>
+
+            <DsButton type="green" size="base" text="Success Alert" onClick={() => setIsSuccessAlertOpen(true)} />
+            <DsButton type="red" size="base" text="Danger Alert" onClick={() => setIsDangerAlertOpen(true)} />
+            <DsButton type="yellow" size="base" text="Warning Alert" onClick={() => setIsWarningAlertOpen(true)} />
+            <DsButton type="default" size="base" text="Info Alert" onClick={() => setIsInfoAlertOpen(true)} />
+            <DsButton type="dark" size="base" text="Alert with content" onClick={() => setIsContentAlertOpen(true)} />
           </div>
 
           <DsAlertModal type="success" title="Action Was Successfully Done" open={isSuccessAlertOpen} onClose={() => setIsSuccessAlertOpen(false)} />
@@ -105,8 +106,8 @@ const DsDialogs: FC = () => {
           <h4 className="varients-title">Confirms</h4>
 
           <div className='flex items-start gap-x-4'>
-            <button className='btn btn-md btn-yellow' onClick={() => setIsConfirmWarningModalOpen(true)}>Confirm Warning</button>
-            <button className='btn btn-md btn-red' onClick={() => setIsConfirmDangerModalOpen(true)}>Confirm Danger</button>
+            <DsButton type="yellow" size="base" text="Confirm Warning" onClick={() => setIsConfirmWarningModalOpen(true)} />
+            <DsButton type="red" size="base" text="Confirm Danger" onClick={() => setIsConfirmDangerModalOpen(true)} />
           </div>
 
           <DsConfirmModal

@@ -1,10 +1,9 @@
-import { FC } from "react";
-import DsBox from "./DsBox";
-import DsSection from './DsSection';
-import React from "react";
-import DsText from "../text/DsText";
+import React, { FC } from "react";
+import DsBox from "../designSystem/components/boxes/DsBox";
+import DsSection from "../designSystem/components/boxes/DsSection";
+import DsText from "../designSystem/components/text/DsText";
 
-const DsBoxes: FC = () => {
+const Boxes: FC = () => {
   return (
     <section id="ds-boxes" className="ds-section">
       <h2 className="ds-section-title">Boxes</h2>
@@ -63,4 +62,4 @@ const DsBoxes: FC = () => {
   );
 };
 
-export default DsBoxes;
+export default Boxes;

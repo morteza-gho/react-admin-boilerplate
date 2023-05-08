@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 
 interface IPropTypes {
   type: 'white' | 'blue-light' | 'red-light' | 'gray-light' | 'gray-lighter',

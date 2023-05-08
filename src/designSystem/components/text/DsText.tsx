@@ -1,5 +1,4 @@
-import useMediaQuery from "@hooks/useMediaQuery";
-import { FC, ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 
 /* 
   font-weight:
@@ -80,15 +79,6 @@ const DsText: FC<IPropTypes> = ({
   onClick
 }) => {
 
-  /* const is2Xl = useMediaQuery('(min-width: 1840px)');
-  const isXl = useMediaQuery('(min-width: 1600px)'); */
-  /* 
-    root(html) font-size
-    12px for 0 to xl    -  mobile | tablet | normal monitors
-    14px for xl to 2xl  -  large monitors
-    16px for 2xl to up  -  very large monitors
-  */
-  // let baseFontSize = is2Xl ? 16 : isXl ? 14 : 13;
   let baseFontSize = 16;
 
   let fontSizeInRem = customFontSize ? customFontSize / baseFontSize + 'rem' : '' // convert px to rem for custom font-size

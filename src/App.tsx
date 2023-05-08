@@ -3,7 +3,7 @@ import { Breadcrumb, Layout, Menu } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { HiBadgeCheck, HiInbox, HiMenu } from 'react-icons/hi';
 import DsButton from './designSystem/components/buttons/DsButton';
-import { HiCheckCircle, HiDocumentText, HiExclamationTriangle, HiFlag, HiHome, HiOutlineStop, HiRocketLaunch, HiUserCircle, HiViewColumns } from 'react-icons/hi2';
+import { HiCheckCircle, HiDocumentText, HiExclamationTriangle, HiFlag, HiHome, HiOutlineStop, HiRocketLaunch, HiTableCells, HiUserCircle, HiViewColumns } from 'react-icons/hi2';
 
 const App = () => {
 
@@ -30,6 +30,9 @@ const App = () => {
     } */
     {
       key: 'Dashboard', icon: <HiHome />, label: 'Dashboard', target: '/app/dashboard'
+    },
+    {
+      key: 'Tables', icon: <HiTableCells />, label: 'Tables', target: '/app/Tables'
     },
     {
       key: 'Buttons', icon: <HiInbox />, label: 'Buttons', target: '/app/buttons'

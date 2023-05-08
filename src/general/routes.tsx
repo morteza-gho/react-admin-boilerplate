@@ -16,6 +16,7 @@ const Boxes = lazy(() => import("../components/Boxes"));
 const Dialogs = lazy(() => import("../components/Dialogs"));
 const Texts = lazy(() => import("../components/Texts"));
 const Steps = lazy(() => import("../components/Steps"));
+const Tabs = lazy(() => import("../components/Tabs"));
 
 const AppRoutes = () => {
   return (
@@ -40,6 +41,7 @@ const AppRoutes = () => {
           <Route path="dialogs" element={<Dialogs />} />
           <Route path="texts" element={<Texts />} />
           <Route path="steps" element={<Steps />} />
+          <Route path="Tabs" element={<Tabs />} />
 
           <Route path="404" element={<PageNotFound />} />
         </Route>

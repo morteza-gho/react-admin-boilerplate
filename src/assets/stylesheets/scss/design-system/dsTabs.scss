@@ -3,14 +3,14 @@
   @apply flex bg-white border border-gray-100 divide-x divide-gray-100 rounded-lg overflow-hidden;
 
   .tab-button {
-    @apply flex-1 text-blue-main hover:bg-blue-light
+    @apply flex-1 text-blue-600 hover:bg-blue-100
   }
   .tab-button {
     &.active {
-      @apply bg-blue-light
+      @apply bg-blue-100
     }
     &.disabled {
-      @apply bg-gray-100 text-gray-300 cursor-not-allowed
+      @apply bg-gray-100 text-gray-400 cursor-not-allowed
     }
   } /* .tab-button */
 
@@ -44,14 +44,14 @@
   @apply rounded-none;
 
   .tab-button.active {
-    @apply border-b-blue-main
+    @apply border-b-blue-600
   }
 
   &.tabs-md .tab-button.active {
-    @apply border-b-2 border-b-blue-main pt-2.5
+    @apply border-b-2 border-b-blue-600 pt-2.5
   }
   &.tabs-lg .tab-button.active {
-    @apply border-b-4 border-b-blue-main pt-5
+    @apply border-b-4 border-b-blue-600 pt-5
   }
 
 } /* .tabs-flat  */

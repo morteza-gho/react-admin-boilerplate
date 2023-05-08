@@ -1,6 +1,6 @@
 import React from "react";
 import { FC, useState } from "react";
-import DsTab from "./DsTab";
+import DsTab from "../designSystem/components/tabs/DsTab";
 
 const tabItems1 = [
   { key: 'mediumTab1', title: 'Tab Header 1', disabled: false },

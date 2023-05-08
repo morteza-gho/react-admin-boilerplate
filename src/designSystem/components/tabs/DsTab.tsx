@@ -1,4 +1,4 @@
-import { FC, MouseEventHandler, ReactNode, useState } from "react";
+import React, { FC, useState } from "react";
 
 interface ITabItem {
   key: string,

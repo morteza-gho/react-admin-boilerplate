@@ -8,6 +8,7 @@ const PageNotFound = lazy(() => import("../components/global/PageNotFound"));
 const Dashboard = lazy(() => import("../components/Dashboard"));
 const Buttons = lazy(() => import("../components/Buttons"));
 const FormItems = lazy(() => import("../components/FormItems"));
+const CheckBoxesRadios = lazy(() => import("../components/CheckBoxesRadios"));
 const FormValidation = lazy(() => import("../components/FormValidation"));
 
 const AppRoutes = () => {
@@ -25,6 +26,7 @@ const AppRoutes = () => {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="buttons" element={<Buttons />} />
           <Route path="formItems" element={<FormItems />} />
+          <Route path="checkBoxesRadios" element={<CheckBoxesRadios />} />
           <Route path="formValidation" element={<FormValidation />} />
 
           <Route path="404" element={<PageNotFound />} />

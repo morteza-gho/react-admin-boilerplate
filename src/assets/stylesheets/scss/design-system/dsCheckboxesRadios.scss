@@ -118,15 +118,15 @@
     &.checkbox-black {
       &:hover {
         .ant-checkbox-inner {
-          @apply border-stone-800
+          @apply border-stone-800 !important
         }
       }
       .ant-checkbox-checked {
         &:after {
-          @apply border-stone-800
+          @apply border-stone-800 !important
         }
         .ant-checkbox-inner {
-          @apply border-stone-800 bg-stone-800
+          @apply border-stone-800 bg-stone-800 !important
         }
       }
     } /* .checkbox-black */
@@ -134,15 +134,15 @@
     &.checkbox-blue {
       &:hover {
         .ant-checkbox-inner {
-          @apply border-blue-600
+          @apply border-blue-600 !important
         }
       }
       .ant-checkbox-checked {
         &:after {
-          @apply border-blue-600
+          @apply border-blue-600 !important
         }
         .ant-checkbox-inner {
-          @apply border-blue-600 bg-blue-600
+          @apply border-blue-600 bg-blue-600 !important
         }
       }
     } /* .checkbox-blue */
@@ -150,15 +150,15 @@
     &.checkbox-yellow {
       &:hover {
         .ant-checkbox-inner {
-          @apply border-yellow-600
+          @apply border-yellow-600 !important
         }
       }
       .ant-checkbox-checked {
         &:after {
-          @apply border-yellow-600
+          @apply border-yellow-600 !important
         }
         .ant-checkbox-inner {
-          @apply border-yellow-600 bg-yellow-600
+          @apply border-yellow-600 bg-yellow-600 !important
         }
       }
     } /* .checkbox-blue */

@@ -4,7 +4,7 @@ import { Breadcrumb, Layout, Menu } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { HiInbox, HiMenu } from 'react-icons/hi';
 import DsButton from './designSystem/components/buttons/DsButton';
-import { HiDocumentText, HiExclamationTriangle, HiHome } from 'react-icons/hi2';
+import { HiCheck, HiCheckCircle, HiDocumentText, HiExclamationTriangle, HiHome } from 'react-icons/hi2';
 
 const App = () => {
 
@@ -37,6 +37,9 @@ const App = () => {
     },
     {
       key: 'FormItems', icon: <HiDocumentText />, label: 'FormItems', target: '/app/FormItems'
+    },
+    {
+      key: 'CheckBoxesRadios', icon: <HiCheckCircle />, label: 'CheckBoxesRadios', target: '/app/CheckBoxesRadios'
     },
     {
       key: 'FormValidation', icon: <HiExclamationTriangle />, label: 'FormValidation', target: '/app/FormValidation'

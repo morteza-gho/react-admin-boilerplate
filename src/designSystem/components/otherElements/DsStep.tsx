@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 
 interface IPropTypes {
   type: 'blue' | 'blue-light' | 'green',

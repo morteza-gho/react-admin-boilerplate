@@ -103,16 +103,16 @@
     @apply bg-blue-300
   }
   &.step-blue .progress .filled {
-    @apply bg-blue-main
+    @apply bg-blue-600
   }
   &.step-blue .current .filled {
-    @apply bg-blue-main
+    @apply bg-blue-600
   }
   &.step-green .progress .filled {
-    @apply bg-green-main
+    @apply bg-green-600
   }
   &.step-green .current .filled {
-    @apply bg-green-main
+    @apply bg-green-600
   }
 
 } /* .steps */

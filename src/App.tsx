@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
-import { HiInbox, HiMenu } from 'react-icons/hi';
+import { HiBadgeCheck, HiInbox, HiMenu } from 'react-icons/hi';
 import DsButton from './designSystem/components/buttons/DsButton';
 import { HiCheck, HiCheckCircle, HiDocumentText, HiExclamationTriangle, HiHome, HiUserCircle } from 'react-icons/hi2';
 
@@ -46,7 +46,11 @@ const App = () => {
     },
     {
       key: 'Avatars', icon: <HiUserCircle />, label: 'Avatars', target: '/app/Avatars'
+    },
+    {
+      key: 'Badges', icon: <HiBadgeCheck />, label: 'Badges', target: '/app/Badges'
     }
+    
   ]
 
   return (

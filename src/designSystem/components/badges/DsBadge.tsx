@@ -1,7 +1,9 @@
-import { FC } from "react";
+import React, { FC } from "react";
 
 interface IPropTypes {
-  type: 'blue' | 'blue-light' | 'green' | 'green-light' | 'red' | 'orange' | 'gray' | 'gray-light' | 'black' | 'white',
+  type:
+  /* main colors */     'default' | 'dark' | 'light' | 'green' | 'red' | 'yellow' | 'orange' | 'purple' |
+  /* light colors */    'default-light' | 'dark-light' | 'green-light' | 'red-light' | 'yellow-light' | 'orange-light' | 'purple-light'
   text: string,
   innerContent?: string | number,
   innerCorner?: boolean,

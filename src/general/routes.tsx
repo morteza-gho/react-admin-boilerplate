@@ -11,6 +11,7 @@ const FormItems = lazy(() => import("../components/FormItems"));
 const CheckBoxesRadios = lazy(() => import("../components/CheckBoxesRadios"));
 const FormValidation = lazy(() => import("../components/FormValidation"));
 const Avatars = lazy(() => import("../components/Avatars"));
+const Badges = lazy(() => import("../components/Badges"));
 
 const AppRoutes = () => {
   return (
@@ -30,6 +31,7 @@ const AppRoutes = () => {
           <Route path="checkBoxesRadios" element={<CheckBoxesRadios />} />
           <Route path="formValidation" element={<FormValidation />} />
           <Route path="avatars" element={<Avatars />} />
+          <Route path="badges" element={<Badges />} />
 
           <Route path="404" element={<PageNotFound />} />
         </Route>

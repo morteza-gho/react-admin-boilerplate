@@ -32,7 +32,7 @@ const App = () => {
       key: 'Dashboard', icon: <HiHome />, label: 'Dashboard', target: '/app/dashboard'
     },
     {
-      key: 'Tables', icon: <HiTableCells />, label: 'Tables', target: '/app/Tables'
+      key: 'Tables', icon: <HiTableCells />, label: 'Tables', target: '/app/tables'
     },
     {
       key: 'Buttons', icon: <HiInbox />, label: 'Buttons', target: '/app/buttons'
@@ -41,31 +41,31 @@ const App = () => {
       key: 'FormItems', icon: <HiDocumentText />, label: 'FormItems', target: '/app/FormItems'
     },
     {
-      key: 'CheckBoxesRadios', icon: <HiCheckCircle />, label: 'CheckBoxesRadios', target: '/app/CheckBoxesRadios'
+      key: 'CheckBoxesRadios', icon: <HiCheckCircle />, label: 'CheckBoxesRadios', target: '/app/checkBoxesRadios'
     },
     {
-      key: 'FormValidation', icon: <HiExclamationTriangle />, label: 'FormValidation', target: '/app/FormValidation'
+      key: 'FormValidation', icon: <HiExclamationTriangle />, label: 'FormValidation', target: '/app/formValidation'
     },
     {
-      key: 'Avatars', icon: <HiUserCircle />, label: 'Avatars', target: '/app/Avatars'
+      key: 'Avatars', icon: <HiUserCircle />, label: 'Avatars', target: '/app/avatars'
     },
     {
-      key: 'Badges', icon: <HiBadgeCheck />, label: 'Badges', target: '/app/Badges'
+      key: 'Badges', icon: <HiBadgeCheck />, label: 'Badges', target: '/app/badges'
     },
     {
-      key: 'Boxes', icon: <HiOutlineStop />, label: 'Boxes', target: '/app/Boxes'
+      key: 'Boxes', icon: <HiOutlineStop />, label: 'Boxes', target: '/app/boxes'
     },
     {
-      key: 'Dialogs', icon: <HiRocketLaunch />, label: 'Dialogs', target: '/app/Dialogs'
+      key: 'Dialogs', icon: <HiRocketLaunch />, label: 'Dialogs', target: '/app/dialogs'
     },
     {
-      key: 'Texts', icon: <HiDocumentText />, label: 'Texts', target: '/app/Texts'
+      key: 'Texts', icon: <HiDocumentText />, label: 'Texts', target: '/app/texts'
     },
     {
-      key: 'Steps', icon: <HiFlag />, label: 'Steps', target: '/app/Steps'
+      key: 'Steps', icon: <HiFlag />, label: 'Steps', target: '/app/steps'
     },
     {
-      key: 'Tabs', icon: <HiViewColumns />, label: 'Tabs', target: '/app/Tabs'
+      key: 'Tabs', icon: <HiViewColumns />, label: 'Tabs', target: '/app/tabs'
     }
     
   ]

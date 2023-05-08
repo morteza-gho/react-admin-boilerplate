@@ -6,6 +6,7 @@ import App from "../App";
 const Login = lazy(() => import("../components/login/Login"));
 const PageNotFound = lazy(() => import("../components/global/PageNotFound"));
 const Dashboard = lazy(() => import("../components/Dashboard"));
+const Tables = lazy(() => import("../components/Tables"));
 const Buttons = lazy(() => import("../components/Buttons"));
 const FormItems = lazy(() => import("../components/FormItems"));
 const CheckBoxesRadios = lazy(() => import("../components/CheckBoxesRadios"));
@@ -31,6 +32,7 @@ const AppRoutes = () => {
 
         <Route path='/app' element={<App />}>
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="tables" element={<Tables />} />
           <Route path="buttons" element={<Buttons />} />
           <Route path="formItems" element={<FormItems />} />
           <Route path="checkBoxesRadios" element={<CheckBoxesRadios />} />
@@ -41,7 +43,7 @@ const AppRoutes = () => {
           <Route path="dialogs" element={<Dialogs />} />
           <Route path="texts" element={<Texts />} />
           <Route path="steps" element={<Steps />} />
-          <Route path="Tabs" element={<Tabs />} />
+          <Route path="tabs" element={<Tabs />} />
 
           <Route path="404" element={<PageNotFound />} />
         </Route>

@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import { HiHand } from "react-icons/hi";
+import { toast } from "react-toastify";
 import DsAlertModal from "../designSystem/components/dialogs/DsAlertModal";
 import DsConfirmModal from "../designSystem/components/dialogs/DsConfirmModal";
 import DsModal from "../designSystem/components/dialogs/DsModal";
@@ -30,9 +31,9 @@ const DsDialogs: FC = () => {
           <h4 className="varients-title">Modals</h4>
 
           <div className='flex items-start gap-x-4'>
-            <DsButton type="default" size="base" text="Modal Small" onClick={() => setIsSmModalOpen(true)} />
-            <DsButton type="default" size="base" text="Modal Medium" onClick={() => setIsMdModalOpen(true)} />
-            <DsButton type="default" size="base" text="Modal Large" onClick={() => setIsLgModalOpen(true)} />
+            <DsButton type="default" size="base" text="Small Modal" onClick={() => setIsSmModalOpen(true)} />
+            <DsButton type="default" size="base" text="Medium Modal" onClick={() => setIsMdModalOpen(true)} />
+            <DsButton type="default" size="base" text="Large Modal" onClick={() => setIsLgModalOpen(true)} />
           </div>
 
           <DsModal size="sm" title="Modal Small" open={isSmModalOpen} onClose={() => setIsSmModalOpen(false)}>
@@ -128,9 +129,24 @@ const DsDialogs: FC = () => {
 
         </div> {/* end of confirms */}
 
+
+        <div className="ds-section-vaients">
+          <h4 className="varients-title">Notification</h4>
+
+          <div className='flex items-start gap-x-4'>
+
+            <DsButton type="green" size="base" text="Success" onClick={() => toast.success('this is a success notification')} />
+            <DsButton type="red" size="base" text="Error" onClick={() => toast.error('this is a error notification')} />
+            <DsButton type="yellow" size="base" text="Warning" onClick={() => toast.warning('this is a warning notification')} />
+            <DsButton type="default" size="base" text="Info" onClick={() => toast.info('this is a info notification')} />
+            <DsButton type="light" size="base" text="Light" onClick={() => toast('this is a light notification')} />
+          </div>
+        </div> {/* end of notofications */}
+
+
       </div> {/* .ds-section-content */}
 
-    </section>
+    </section >
   );
 };
 

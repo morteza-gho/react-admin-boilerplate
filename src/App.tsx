@@ -56,7 +56,7 @@ const App = () => {
       key: 'Boxes', icon: <HiOutlineStop />, label: 'Boxes', target: '/app/boxes'
     },
     {
-      key: 'Dialogs', icon: <HiRocketLaunch />, label: 'Dialogs', target: '/app/dialogs'
+      key: 'Dialogs', icon: <HiRocketLaunch />, label: 'Dialogs & Notifications', target: '/app/dialogs'
     },
     {
       key: 'Texts', icon: <HiDocumentText />, label: 'Texts', target: '/app/texts'

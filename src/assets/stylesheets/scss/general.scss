@@ -57,6 +57,7 @@
 }
 
 html {
+  @apply h-full;
   font-size: 16px;
 
   @screen 2xl {
@@ -65,7 +66,10 @@ html {
 
 }
 body {
-  @apply bg-white
+  @apply bg-white h-full
+}
+#root {
+  @apply h-full
 }
 
 

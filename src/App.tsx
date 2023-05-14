@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Breadcrumb, Layout, Menu } from 'antd';
+import { Button, Dropdown, Layout, Menu, MenuProps } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
-import { HiBadgeCheck, HiInbox, HiMenu } from 'react-icons/hi';
+import { HiBadgeCheck, HiInbox, HiMenu, HiOutlineLogout } from 'react-icons/hi';
 import DsButton from './designSystem/components/buttons/DsButton';
-import { HiCheckCircle, HiDocumentText, HiExclamationTriangle, HiFlag, HiHome, HiOutlineStop, HiRocketLaunch, HiTableCells, HiUserCircle, HiViewColumns } from 'react-icons/hi2';
+import { HiArrowDown, HiCheckCircle, HiChevronDown, HiDocumentText, HiExclamationTriangle, HiFlag, HiHome, HiOutlineStop, HiRocketLaunch, HiTableCells, HiUserCircle, HiViewColumns } from 'react-icons/hi2';
+import { useLayoutEffect } from 'react';
+import { CurrentUser, IsLogin, Logout } from './services/AuthService';
 
 const App = () => {
 
@@ -20,14 +22,6 @@ const App = () => {
 
 
   const menuItems = [
-    /* {
-      key: 'Users', icon: <HiUser />, label: 'Users',
-      children: [
-        { key: 'sub-user-1', icon: <HiUser />, label: 'sub user 1', },
-        { key: 'sub-user-2', icon: <HiUser />, label: 'sub user 2', },
-        { key: 'sub-user-3', icon: <HiUser />, label: 'sub user 3', }
-      ]
-    } */
     {
       key: 'Dashboard', icon: <HiHome />, label: 'Dashboard', target: '/app/dashboard'
     },
@@ -67,8 +61,34 @@ const App = () => {
     {
       key: 'Tabs', icon: <HiViewColumns />, label: 'Tabs', target: '/app/tabs'
     }
-    
+
   ]
+
+  const handleDropdownClick = ({ key }) => {
+    if (key === 'logout') {
+      Logout()
+    }
+  }
+
+  const items: MenuProps['items'] = [
+    {
+      label: 'Logout',
+      key: 'logout',
+      icon: <HiOutlineLogout />,
+    }
+  ];
+
+  const menuProps = {
+    items,
+    onClick: handleDropdownClick,
+  };
+
+  /* redirect to login if user unauthorized */
+  useLayoutEffect(() => {
+    if (!IsLogin()) {
+      navigate('/login')
+    }
+  }, []);
 
   return (
     <div className="app">
@@ -89,8 +109,16 @@ const App = () => {
       <Layout className={`content-wrapper ${collapsed ? 'full-width' : ''}`}>
 
         <header className='main-header'>
-          <div className='flex justify-between'>
+          <div className='flex justify-between items-center w-full'>
             <DsButton type='light' justIcon icon={<HiMenu />} onClick={() => setCollapsed(!collapsed)} />
+            <div className='flex'>
+              <Dropdown className='bg-white rounded-md' menu={menuProps} placement="bottom">
+                <Button className='flex gap-x-2 items-center'>
+                  <HiChevronDown />
+                  {CurrentUser().name}
+                </Button>
+              </Dropdown>
+            </div>
           </div>
         </header>
 

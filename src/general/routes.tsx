@@ -18,12 +18,14 @@ const Dialogs = lazy(() => import("../components/Dialogs"));
 const Texts = lazy(() => import("../components/Texts"));
 const Steps = lazy(() => import("../components/Steps"));
 const Tabs = lazy(() => import("../components/Tabs"));
+const Alerts = lazy(() => import("../components/Alerts"));
 
 const AppRoutes = () => {
   return (
     <Suspense fallback={<div className="pre-loading">Loading...</div>}>
       <Routes>
 
+        {/* @ts-ignore */}
         <Route exact path='/login' element={<Login />} />
 
         <Route path='*' element={<Navigate to='/app/404' />} />
@@ -44,6 +46,7 @@ const AppRoutes = () => {
           <Route path="texts" element={<Texts />} />
           <Route path="steps" element={<Steps />} />
           <Route path="tabs" element={<Tabs />} />
+          <Route path="alerts" element={<Alerts />} />
 
           <Route path="404" element={<PageNotFound />} />
         </Route>

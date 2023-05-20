@@ -3,7 +3,7 @@ import { Button, Dropdown, Layout, Menu, MenuProps } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { HiBadgeCheck, HiInbox, HiMenu, HiOutlineLogout } from 'react-icons/hi';
 import DsButton from './designSystem/components/buttons/DsButton';
-import { HiArrowDown, HiCheckCircle, HiChevronDown, HiDocumentText, HiExclamationTriangle, HiFlag, HiHome, HiOutlineStop, HiRocketLaunch, HiTableCells, HiUserCircle, HiViewColumns } from 'react-icons/hi2';
+import { HiArrowDown, HiBellAlert, HiCheckCircle, HiChevronDown, HiDocumentText, HiExclamationTriangle, HiFlag, HiHome, HiOutlineStop, HiRocketLaunch, HiTableCells, HiUserCircle, HiViewColumns } from 'react-icons/hi2';
 import { useLayoutEffect } from 'react';
 import { CurrentUser, IsLogin, Logout } from './services/AuthService';
 
@@ -48,6 +48,9 @@ const App = () => {
     },
     {
       key: 'Boxes', icon: <HiOutlineStop />, label: 'Boxes', target: '/app/boxes'
+    },
+    {
+      key: 'Alerts', icon: <HiBellAlert />, label: 'Alerts', target: '/app/alerts'
     },
     {
       key: 'Dialogs', icon: <HiRocketLaunch />, label: 'Dialogs & Notifications', target: '/app/dialogs'

@@ -5,7 +5,7 @@ import { HiOutlineInformationCircle } from "react-icons/hi2";
 
 interface PropTypes {
   text?: string | ReactNode
-  helpText?: string
+  helpText?: string | ReactNode
   helpTextClass?: string
   onHelpTextClick?: () => void
   helpIcon?: ReactNode

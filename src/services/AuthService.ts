@@ -2,12 +2,12 @@
 export const IsLogin = () => {
   return localStorage.getItem('token')
 }
-export const SetToken = (token) => {
+export const SetToken = (token: string) => {
   localStorage.setItem('token', token);
 }
 
 // TODO check this async/await
-export const LoginUser = (data, token) => {
+export const LoginUser = (data, token: string) => {
   return new Promise<void>(resolve => setTimeout(() => {
     SetToken(token);
     SetUserData(data);
@@ -28,5 +28,5 @@ export const SetUserData = (data) => {
   localStorage.setItem('currentUser', JSON.stringify(data))
 }
 export const CurrentUser = () => {
-  return JSON.parse(localStorage.getItem('currentUser'))
+  return JSON.parse(localStorage.getItem('currentUser') || '')
 }

@@ -113,15 +113,20 @@ const App = () => {
 
         <header className='main-header'>
           <div className='flex justify-between items-center w-full'>
-            <DsButton type='light' justIcon icon={<HiMenu />} onClick={() => setCollapsed(!collapsed)} />
-            <div className='flex'>
-              <Dropdown className='bg-white rounded-md' menu={menuProps} placement="bottom">
-                <Button className='flex gap-x-2 items-center'>
-                  <HiChevronDown />
-                  {CurrentUser().name}
-                </Button>
-              </Dropdown>
-            </div>
+            {
+              CurrentUser() &&
+              <>
+                <DsButton type='light' justIcon icon={<HiMenu />} onClick={() => setCollapsed(!collapsed)} />
+                <div className='flex'>
+                  <Dropdown className='bg-white rounded-md' menu={menuProps} placement="bottom">
+                    <Button className='flex gap-x-2 items-center'>
+                      <HiChevronDown />
+                      {CurrentUser().name}
+                    </Button>
+                  </Dropdown>
+                </div>
+              </>
+            }
           </div>
         </header>
 

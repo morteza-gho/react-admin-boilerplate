@@ -1,8 +1,9 @@
-import React, { FC, ReactNode } from "react";
 import { Form, Select } from "antd";
+import { FC, ReactNode } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import FormItemLabel from "./partials/FormItemLabel";
 import { FormItemPropTypes, ISelectItem } from "./types";
+import React from "react";
 
 interface PropTypes extends FormItemPropTypes {
   options?: any // select options
@@ -13,6 +14,8 @@ interface PropTypes extends FormItemPropTypes {
   defaultValue?: string | number
   children?: ReactNode
   loading?: boolean
+  dark?:boolean
+  showArrow?:boolean
   onPopupScroll?: (props: any) => void
   onSearch?: (term: string) => void
   onChange?: (val) => void,
@@ -42,6 +45,8 @@ const DsFormSelect: FC<PropTypes> = ({
   rules,
   children,
   loading = false,
+  dark = false,
+  showArrow = true,
   onPopupScroll,
   onSearch,
   onChange,
@@ -69,18 +74,18 @@ const DsFormSelect: FC<PropTypes> = ({
         <Form.Item name={name} label="" rules={rules}>
           <Select
             options={options}
-            id={name}
+            id={name.toString()}
             className="form-input"
             disabled={disabled}
             placeholder={placeholder}
             showSearch={showSearch}
             allowClear={allowClear || mode === 'multiple'}
             clearIcon={<HiOutlineX />}
-            showArrow
+            showArrow={showArrow}
             defaultValue={defaultValue}
             mode={mode}
             maxTagCount="responsive"
-            popupClassName={mode ? 'multiple-select' : ''}
+            popupClassName={`${mode ? 'multiple-select' : ''} ${dark ? 'select-dark' : ''}`}
             loading={loading}
             fieldNames={fieldNames}
             optionFilterProp="children"
@@ -90,11 +95,11 @@ const DsFormSelect: FC<PropTypes> = ({
             onChange={onChange ? (value) => onChange(value) : undefined}
             onSearch={onSearch ? (term) => onSearch(term) : undefined}
             onPopupScroll={onPopupScroll ? (props) => onPopupScroll(props) : undefined}
-            onDeselect={(value) => { onRemoveItem ? onRemoveItem(value) : undefined }}
-            onClear={() => { onClear ? onClear : undefined }}
+            onDeselect={(value) =>  onRemoveItem ? onRemoveItem(value) : undefined }
+            onClear={() => onClear ? onClear : undefined }
           >
             {children && !options ? children : null}
-          </Select>
+          </Select> 
         </Form.Item>
 
       </div> {/* end of .input-wrapper */}

@@ -1,9 +1,8 @@
-input, select, textarea {
-  /* remove box-shaddow for all inputs and select */
-  @apply ring-offset-0 ring-0 shadow-none !important
-}
+input,
+select,
 textarea {
-  @apply h-auto resize-none !important
+  /* remove box-shaddow for all inputs and select */
+  @apply ring-offset-0 ring-0 shadow-none !important;
 }
 
 /*********** forms style ***********/
@@ -11,7 +10,7 @@ textarea {
 .ds-form {
   .ant-form-item {
     .ant-row {
-      @apply flex-row
+      @apply flex-row;
     }
   }
 }
@@ -23,11 +22,11 @@ textarea {
     @apply flex justify-between items-center;
 
     .text {
-      @apply block text-gray-600 capitalize
+      @apply block text-gray-main capitalize;
     }
     .another-text {
       .icon {
-        @apply cursor-pointer
+        @apply cursor-pointer;
       }
     }
   }
@@ -37,97 +36,104 @@ textarea {
   }
 
   .form-input {
-    @apply border border-gray-300 bg-white text-stone-800 w-full h-full rounded transition placeholder:text-gray-300 focus:border-blue-600;
+    @apply border border-gray-light bg-snowy-main text-black-main w-full h-full rounded transition placeholder:text-gray-light focus:border-blue-main;
 
     &[disabled] {
-      @apply bg-gray-200 text-gray-600 cursor-not-allowed !important
+      @apply bg-gray-lighter text-black-main cursor-not-allowed !important;
     }
   }
 
-  .input-error, .ant-input-status-error, .ant-select-status-error {
+  textarea.form-input {
+    @apply resize-none;
+  }
+
+  .input-error,
+  .ant-input-status-error,
+  .ant-select-status-error {
     @apply border-red-400 focus:border-red-400 !important;
-    
+
     .ant-select-selector {
-      @apply border-0 !important
+      @apply border-0 !important;
     }
   }
 
   .errors-wrapper {
-    @apply text-red-600 mt-1 text-sm;
+    @apply text-red-main mt-1 text-sm;
 
     .error-item {
       @apply flex items-center gap-x-1;
     }
   }
 
+  .ant-form-item-explain-error {
+    @apply text-red-main;
+  }
+
   .ant-select {
     @apply w-full;
 
     &:hover .ant-select-selector {
-      @apply border-gray-300
+      @apply border-gray-light;
     }
     &.ant-select-focused {
       @apply border-transparent;
-      
+
       .ant-select-selector {
-        @apply border-blue-600 shadow-none !important
+        @apply border-blue-main shadow-none !important;
       }
-    } 
+    }
     &.ant-select-disabled .ant-select-selector {
-      @apply bg-gray-200 text-gray-600 cursor-not-allowed
+      @apply bg-gray-lighter text-black-main cursor-not-allowed;
     }
 
     .ant-select-selector {
-      @apply border border-gray-300 bg-white text-stone-800 w-full h-full items-center rounded placeholder:text-gray-300 focus:border-blue-600
+      @apply border border-gray-light bg-snowy-main text-black-main w-full h-full items-center rounded placeholder:text-gray-light focus:border-blue-main;
     }
 
     .ant-select-selection-search {
-      @apply h-full ml-0
+      @apply h-full ml-0;
     }
     .ant-select-selection-search-input {
-      @apply h-full !important
+      @apply h-full !important;
     }
     .ant-select-selection-placeholder {
-      @apply text-gray-300
+      @apply text-gray-light;
     }
     .ant-select-arrow {
-      @apply text-blue-600 text-base
+      @apply text-blue-main text-base;
     }
     .ant-select-clear {
-      @apply w-5 h-5 text-red-600 text-xl right-2.5 top-[45%]
+      @apply w-5 h-5 text-red-main text-xl right-2.5 top-[45%];
     }
-
   } /* .ant-select */
 
   .ant-select-multiple {
-
     .ant-select-selection-item {
-      @apply bg-gray-200 h-full border-0 my-0 font-regular
+      @apply bg-gray-lighter h-full border-0 my-0 font-regular;
     }
     .ant-select-selection-item-remove {
-      @apply -mt-0.5
+      @apply -mt-0.5;
     }
-  }  /* .ant-select-multiple */
+  } /* .ant-select-multiple */
 
   .ant-picker {
-    @apply border border-gray-300 bg-white text-stone-800 w-full h-full items-center rounded placeholder:text-gray-300 focus:border-blue-600;
-    
+    @apply border border-gray-light bg-snowy-main text-black-main w-full h-full items-center rounded placeholder:text-gray-light focus:border-blue-main;
+
     &.ant-picker-focused {
-      @apply shadow-none border-blue-600
+      @apply shadow-none border-blue-main;
     }
     &.ant-picker-status-error {
-      @apply border-red-400 focus:border-red-400
+      @apply border-red-400 focus:border-red-400;
     }
-
   } /* .ant-picker */
 
   .ant-form-item {
     @apply mb-0;
 
     .ant-col {
-      @apply min-h-max
+      @apply min-h-max;
     }
-   
+
     .ant-select {
       @apply p-0;
 
@@ -135,10 +141,7 @@ textarea {
         @apply border-transparent;
       }
     }
-  
   } /* .ant-form-item */
-
-
 } /* .form-item  */
 
 /* .form-item-stick-select {
@@ -153,78 +156,72 @@ textarea {
 } */ /* .form-item-stick-select */
 
 .form-item-has-icon {
-
   .icons-wrapper {
-    @apply flex gap-x-2 text-gray-600 absolute;
+    @apply flex gap-x-2 text-gray-main absolute;
 
     .icon {
-      @apply cursor-pointer hover:text-blue-600
+      @apply cursor-pointer hover:text-blue-main;
     }
   }
 
   &.form-item-has-icon-left {
     .form-input {
-      @apply pl-8;
+      @apply pl-10;
     }
     .icons-wrapper {
-      @apply left-2;
+      @apply left-3;
     }
   }
-  
+
   &.form-item-has-icon-right {
     .form-input {
-      @apply pr-8;
+      @apply pr-10;
     }
     .icons-wrapper {
       @apply right-3;
     }
   }
-
 } /* .form-item-has-icon */
 
 .form-item-stick-icon {
   .stick-icon-wrapper {
-    @apply flex justify-center items-center h-full absolute top-0 z-10
+    @apply flex justify-center items-center absolute top-0 z-10;
   }
-} 
+}
 .form-item-stick-icon-left {
   .stick-icon-wrapper {
-    @apply left-0 border-r border-r-gray-300
+    @apply left-0 border-r border-r-gray-light;
   }
 }
 .form-item-stick-icon-right {
   .stick-icon-wrapper {
-    @apply right-0 border-l border-l-gray-300
+    @apply right-0 border-l border-l-gray-light;
   }
 }
 
 .attached-form-items {
-  @apply sm:flex;
+  /* @apply sm:grid; */
 
   .form-item {
-    
-    .form-input, .ant-select-selector {
-      @apply sm:rounded-none sm:border-r-0
+    .form-input,
+    .ant-select-selector {
+      @apply sm:rounded-none sm:border-r-0;
     }
 
     &:first-child {
-      
-      .form-input, .ant-select-selector {
-        @apply sm:rounded-tl sm:rounded-bl
+      .form-input,
+      .ant-select-selector {
+        @apply sm:rounded-tl sm:rounded-bl;
       }
-
     }
 
     &:last-child {
-      
-      .form-input, .ant-select-selector {
-        @apply sm:rounded-tr sm:rounded-br sm:border-r
+      .form-input,
+      .ant-select-selector {
+        @apply sm:rounded-tr sm:rounded-br sm:border-r;
       }
-      
     }
-  
   }
-
 } /* .attached-form-items */
 
 /* style for sm input  */
@@ -233,67 +230,72 @@ textarea {
 
   .form-label {
     @apply mb-1;
-    
+
     .text {
-      @apply text-base font-regular
+      @apply text-base font-regular;
     }
     .another-text {
       @apply text-sm font-regular;
 
       .icon {
-        @apply text-lg
+        @apply text-lg;
       }
     }
-  } 
+  }
   .input-wrapper {
-     .form-input, .ant-select {
+    .form-input,
+    .ant-select,
+    .stick-icon-wrapper {
       @apply h-[35px] xl:h-[35px] 2xl:h-[40px];
+    }
+    textarea.form-input {
+      @apply h-auto;
     }
   }
   .form-input {
-    @apply text-base font-light py-2 px-3
+    @apply text-base font-light py-2 px-3;
   }
   .icons-wrapper {
-    @apply text-lg top-3
+    @apply text-lg top-3;
   }
 
   &.form-item-stick-icon .stick-icon-wrapper {
     @apply w-8;
     .stick-icon {
-      @apply text-lg
+      @apply text-lg;
     }
   }
   &.form-item-stick-icon-left .form-input {
-    @apply pl-10
+    @apply pl-10;
   }
   &.form-item-stick-icon-right .form-input {
-    @apply pr-10
+    @apply pr-10;
   }
 
   /* ant select style in sm input */
   .ant-select-selector {
-    @apply text-base font-light py-2 px-3
+    @apply text-base font-light py-2 px-3;
   }
   .ant-select-selection-item {
-    @apply text-base font-light
+    @apply text-base font-light;
   }
 
   &.form-item-stick-select {
-    .ant-select-selector, .ant-select-selection-item {
-      @apply text-base
+    .ant-select-selector,
+    .ant-select-selection-item {
+      @apply text-base;
     }
-  } 
+  }
 
   .ant-select-multiple {
     .ant-select-selection-item {
-      @apply py-0 px-1.5 text-sm rounded-sm
+      @apply py-0 px-1.5 text-sm rounded-sm;
     }
   }
 
   .ant-picker-input input {
-    @apply text-base font-regular
+    @apply text-base font-regular;
   }
-
 } /* .form-item-sm */
 
 /* style for md input  */
@@ -302,69 +304,73 @@ textarea {
 
   .form-label {
     @apply mb-1;
-    
+
     .text {
-      @apply text-lg font-regular
+      @apply text-lg font-regular;
     }
     .another-text {
       @apply text-base font-regular;
 
       .icon {
-        @apply text-xl
+        @apply text-xl;
       }
     }
-  } 
+  }
   .input-wrapper {
-     .form-input, .ant-select {
+    .form-input,
+    .ant-select,
+    .stick-icon-wrapper {
       @apply h-[40px] xl:h-[45px] 2xl:h-[50px];
+    }
+    textarea.form-input {
+      @apply h-auto;
     }
   }
   .form-input {
-    @apply text-lg font-light py-2 px-3
+    @apply text-lg font-light py-2 px-3;
   }
   .icons-wrapper {
-    @apply text-xl top-4
+    @apply text-xl top-4;
   }
 
   &.form-item-stick-icon .stick-icon-wrapper {
     @apply w-10;
     .stick-icon {
-      @apply text-xl
+      @apply text-xl;
     }
   }
   &.form-item-stick-icon-left .form-input {
-    @apply pl-12
+    @apply pl-12;
   }
   &.form-item-stick-icon-right .form-input {
-    @apply pr-12
+    @apply pr-12;
   }
 
   /* ant select style in md input */
   .ant-select-selector {
-    @apply text-lg font-light py-1  px-3 2xl:py-2
+    @apply text-lg font-light py-1  px-3 2xl:py-2;
   }
   .ant-select-selection-item {
-    @apply text-lg font-light
+    @apply text-lg font-light;
   }
 
   &.form-item-stick-select {
-    .ant-select-selector, .ant-select-selection-item {
-      @apply text-base
+    .ant-select-selector,
+    .ant-select-selection-item {
+      @apply text-base;
     }
-  } 
+  }
 
   .ant-select-multiple {
     .ant-select-selection-item {
-      @apply py-1 px-1.5 text-sm rounded-sm
+      @apply py-1 px-1.5 text-sm rounded-sm;
     }
   }
 
   .ant-picker-input input {
-    @apply text-lg font-light
+    @apply text-lg font-light;
   }
-
 } /* .form-item-md */
-
 
 /* style for lg input */
 .form-item-lg {
@@ -374,81 +380,151 @@ textarea {
     @apply mb-2;
 
     .text {
-      @apply text-xl font-medium
+      @apply text-xl font-medium;
     }
     .another-text {
       @apply text-lg font-regular;
-      
+
       .icon {
-        @apply text-2xl
+        @apply text-2xl;
       }
     }
   }
   .input-wrapper {
-    .form-input, .ant-select {
-     @apply h-[45px] xl:h-[50px] 2xl:h-[60px];
-   }
- }
+    .form-input,
+    .ant-select,
+    .stick-icon-wrapper {
+      @apply h-[48px] xl:h-[52px] 2xl:h-[57px];
+    }
+    textarea.form-input {
+      @apply h-auto;
+    }
+  }
   .form-input {
-    @apply text-xl font-regular py-3 px-4
+    @apply text-xl font-regular py-3 px-4;
   }
   .icons-wrapper {
-    @apply text-2xl top-3.5 mt-0.5 xl:top-4 xl:mt-0
+    @apply text-2xl top-3.5 mt-0.5 xl:top-4 xl:mt-0;
   }
 
   &.form-item-stick-icon .stick-icon-wrapper {
     @apply w-12;
     .stick-icon {
-      @apply text-2xl
+      @apply text-2xl;
     }
   }
   &.form-item-stick-icon-left .form-input {
-    @apply pl-14
+    @apply pl-14;
   }
   &.form-item-stick-icon-right .form-input {
-    @apply pr-14
+    @apply pr-14;
   }
-
 
   /* ant select style in lg input */
   .ant-select-selector {
-    @apply text-xl font-regular py-2 2xl:py-3 px-4
+    @apply text-xl font-regular py-2 2xl:py-3 px-4;
   }
   .ant-select-selection-item {
-    @apply text-xl font-regular
+    @apply text-xl font-regular;
   }
 
   &.form-item-stick-select {
-    .ant-select-selector, .ant-select-selection-item {
-      @apply text-lg font-light
+    .ant-select-selector,
+    .ant-select-selection-item {
+      @apply text-lg font-light;
     }
   }
 
   .ant-select-multiple {
     .ant-select-selection-item {
-      @apply py-1 px-2 text-base rounded 
+      @apply py-1 px-2 text-base rounded;
     }
   }
 
   .ant-picker-input input {
-    @apply text-xl font-regular
+    @apply text-xl font-regular;
   }
-
 } /* .form-item-lg  */
 
-.multiple-select {
+.ant-select-dropdown {
+  @apply rounded-md;
+}
 
+.multiple-select {
   .ant-select-item-option {
     @apply items-center text-base font-regular;
 
     &:hover {
-      @apply bg-gray-200 !important
+      @apply bg-gray-lighter !important;
+    }
+
+    &:before {
+      content: '';
+      @apply border border-black-main w-5 h-5 mr-3 -mt-1 xl:mt-0 rounded-sm;
     }
 
     &.ant-select-item-option-selected {
-      @apply bg-transparent text-blue-600 font-regular;
-    } 
+      @apply bg-transparent text-blue-main font-regular;
 
+      &:before {
+        @apply border-blue-main bg-blue-main;
+      }
+      .ant-select-item-option-state {
+        @apply text-snowy-main;
+      }
+    }
+
+    &.ant-select-item-option-grouped {
+      .ant-select-item-option-state {
+        @apply left-7 ml-0.5;
+      }
+    }
+
+    .ant-select-item-option-state {
+      @apply absolute left-4 top-1 xl:top-0.5 2xl:left-3.5 2xl:top-0.5 text-base;
+    }
   } /* .ant-select-item-option */
 
+  &.select-dark {
+    .ant-select-item-option {
+      &:before {
+        content: '';
+        @apply border-gray-lighter;
+      }
+
+      &.ant-select-item-option-selected {
+        &:before {
+          @apply border-yellow-main bg-yellow-main;
+        }
+        .ant-select-item-option-state {
+          @apply text-snowy-main;
+        }
+      }
+    }
+  } /* .select-dark */
 } /* .multiple-select */
+
+.select-dark {
+  @apply bg-black-main;
+
+  .ant-select-item-group,
+  .ant-empty-description {
+    @apply text-gray-light font-medium;
+  }
+
+  .ant-select-item-option-active {
+    @apply bg-transparent text-yellow-main;
+  }
+
+  .ant-select-item-option {
+    @apply text-snowy-main;
+
+    &:hover {
+      @apply bg-transparent text-yellow-main !important;
+    }
+
+    &.ant-select-item-option-selected {
+      @apply bg-transparent text-yellow-main;
+    }
+  }
+} /* .select-dark */

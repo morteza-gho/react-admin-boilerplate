@@ -105,19 +105,20 @@ const FormItems: FC = () => {
             <DsFormInput type="text" name="input15" size="md" label="medium input with stick icon right" stickIcon={<HiOutlineEnvelope />} stickIconPosition="right" />
 
             <DsFormInput textarea textareaRows={4} name="input16" size="lg" label="textarea" placeholder="this is a sample of textarea" />
+            <DsFormInput textarea textareaRows={2} autoSize={{minRows: 2, maxRows: 4}} name="autosize" size="lg" label="Auto size textarea" placeholder="auto size textara, minRows: 2, maxRows: 4" />
             <DsFormInput textarea textareaRows={3} name="input17" size="md" label="textarea" placeholder="textarea can has all elements - for example: help icon" helpIcon={<HiCursorArrowRays />} helpIconText="you can click me" helpIconClass="text-gray-main hover:text-red-main" onHelpIconClick={helpIconClick} />
 
             <DsFormSelect options={names} allowClear name="input18" size="lg" label="Large AntDesign Select" onChange={(value) => onSelectChange(value)} />
             <DsFormSelect options={names} showSearch name="input19" size="md" label="Large AntDesign Select wih search" />
             <DsFormSelect options={names} mode="multiple" name="input20" size="md" label="multiple AntDesign Select" onChange={(value) => onSelectChange(value)} />
 
-            <div className="attached-form-items sm:grid-cols-3">
+            <div className="attached-form-items grid sm:grid-cols-3">
               <DsFormSelect options={names} name="input21" size="md" label="select 1" />
               <DsFormSelect options={names} name="input22" size="md" label="select 2" />
               <DsFormSelect options={names} name="input23" size="md" label="select 3" />
             </div>
 
-            <div className="attached-form-items sm:grid-cols-3">
+            <div className="attached-form-items grid sm:grid-cols-3">
               <DsFormInput type="text" name="input24" size="md" label="input 1" />
               <DsFormInput type="text" name="input25" size="md" label="input 2" />
               <DsFormInput type="text" name="input26" size="md" label="input 3" />
@@ -127,7 +128,7 @@ const FormItems: FC = () => {
               <div className="form-item form-item-md mb-0">
                 <label className="form-label"><span className="text">enter mobile number</span></label>
               </div>
-              <div className="attached-form-items">
+              <div className="attached-form-items flex">
                 <DsFormSelect options={countries} defaultValue={countries[0].value} name="input27" size="md" placeholder="select code" className="w-1/3" />
                 <DsFormInput type="text" name="input18" size="md" placeholder="enter number" className="w-full" />
               </div>

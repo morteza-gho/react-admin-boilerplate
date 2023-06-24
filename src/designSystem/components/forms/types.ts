@@ -2,13 +2,16 @@ import { Rule } from "antd/lib/form";
 import { ReactNode } from "react";
 
 export interface FormItemPropTypes {
-  name: string,
+  name: string | string[],
   size?: 'sm' | 'md' | 'lg',
   label?: string | ReactNode,
   placeholder?: string,
-  helpText?: string,
+  helpText?: string | ReactNode,
   helpTextClass?: string,
   onHelpTextClick?: () => void,
+  bellowHelpText?: string | ReactNode,
+  bellowHelpTextClass?: string,
+  onBellowHelpTextClick?: () => void,
   icons?: ReactNode,
   iconsClass?: string,
   iconsPosition?: 'right' | 'left',
@@ -17,8 +20,10 @@ export interface FormItemPropTypes {
   helpIconClass?: string,
   onHelpIconClick?: () => void,
   disabled?: boolean,
+  bordered?: boolean,
   rules?: Rule[], // form validation rules here
   className?: string,
+  inputClassName?: string,
 }
 
 export interface IFieldData {

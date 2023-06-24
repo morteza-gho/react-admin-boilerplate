@@ -1,4 +1,4 @@
 .main-sidebar {
   @apply fixed overflow-auto !important;
-  @apply h-full top-0 left-0 scrollbar-thin scrollbar-thumb-blue-400;
+  @apply h-full top-0 left-0 scrollbar scrollbar-w-1 scrollbar-thumb-rounded scrollbar-thumb-blue-300;
 }
